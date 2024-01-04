@@ -1,8 +1,14 @@
 // =============================================================================
 // ? Components
 import App from "@components/App";
+import CreateGame from "@components/CreateGame/CreateGame";
+import RolesDescription from "@components/RolesDescription/RolesDescription";
+import RulesDescription from "@components/RulesDescription/RulesDescription";
+import StartingPage from "@components/StartingPage/StartingPage";
 
-export {App};
+export {
+    App, CreateGame, RolesDescription, RulesDescription, StartingPage
+};
 
 // =============================================================================
 
@@ -13,12 +19,12 @@ export {App};
 // ? Store and slice
 import {setupStore} from "@store/store";
 import {useAppDispatch, useAppSelector} from "@store/hooks";
-import {counterActions, counterState} from "@slices/counterSlice";
+import {gameActions, gameState} from "@slices/gameSlice";
 import {renderWithProviders} from "@tests/wrapperProvider";
 
 export {
-    counterActions,
-    counterState,
+    gameActions,
+    gameState,
     renderWithProviders,
     setupStore,
     useAppDispatch,
