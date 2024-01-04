@@ -3,6 +3,7 @@ import React from "react";
 import {
     CreateGame,
     gameState,
+    ProfilPage,
     RolesDescription,
     RulesDescription,
     StartingPage,
@@ -34,6 +35,11 @@ const App: React.FC = () => {
             {appStep === "roles" && (
                 <>
                     <RolesDescription />
+                </>
+            )}
+            {appStep === "profil" && (
+                <>
+                    <ProfilPage />
                 </>
             )}
         </>

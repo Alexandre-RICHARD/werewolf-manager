@@ -2,12 +2,18 @@
 // ? Components
 import App from "@components/App";
 import CreateGame from "@components/CreateGame/CreateGame";
+import ProfilPage from "@components/ProfilPage/ProfilPage";
 import RolesDescription from "@components/RolesDescription/RolesDescription";
 import RulesDescription from "@components/RulesDescription/RulesDescription";
 import StartingPage from "@components/StartingPage/StartingPage";
 
 export {
-    App, CreateGame, RolesDescription, RulesDescription, StartingPage
+    App,
+    CreateGame,
+    ProfilPage,
+    RolesDescription,
+    RulesDescription,
+    StartingPage
 };
 
 // =============================================================================
