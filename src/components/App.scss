@@ -1,2 +1,8 @@
 // To retrieve default styles and variables
 @import "@styles/index.scss";
+
+#app {
+    min-height: 600px;
+    height: 100vh;
+    min-width: 300px;
+}
