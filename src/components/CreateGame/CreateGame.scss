@@ -1,2 +1,41 @@
 // To retrieve default styles and variables
 @import "@styles/index.scss";
+
+.number-selector-container {
+    width: 80%; /* Ajuste la largeur du conteneur selon tes besoins */
+    margin: auto;
+    text-align: center;
+    display: flex;
+    gap: 0 8px;
+}
+
+/* Style du slider lui-même */
+input[type="range"] {
+    width: 100%;
+    height: 20px; /* Ajuste la hauteur du slider selon tes besoins */
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 10px 0;
+    background-color: #ddd; /* Couleur de fond du slider */
+    border-radius: 10px; /* Coins arrondis */
+    outline: none;
+}
+
+/* Style de la "piste" du slider */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px; /* Hauteur de la piste */
+    background: #4caf50; /* Couleur de la piste */
+    border-radius: 5px;
+}
+
+/* Style du "pouce" (bouton) du slider */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* Largeur du pouce */
+    height: 20px; /* Hauteur du pouce */
+    background: #2196f3; /* Couleur du pouce */
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px; /* Ajustement vertical pour centrer le pouce */
+}
