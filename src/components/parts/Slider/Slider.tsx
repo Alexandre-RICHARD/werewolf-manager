@@ -2,12 +2,43 @@ import React from "react";
 
 import "./Slider.scss";
 
-const Slider: React.FC = () => {
+interface SliderProps {
+    changePlayerNumber: (newValue: number) => void;
+    max: number;
+    min: number;
+    name: string;
+    value: number;
+}
+
+const Slider: React.FC<SliderProps> = ({
+    changePlayerNumber,
+    max,
+    min,
+    name,
+    value,
+}) => {
+
+    const sliderChangePlayerNumber = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        let inputValue = parseInt(event.target.value, 10);
+        if (isNaN(inputValue) || inputValue < min || inputValue > max) {
+            inputValue = min;
+        }
+        changePlayerNumber(inputValue);
+    };
+
+    const buttonChangePlayerNumber = (param: string) => {
+        const newValue = param === "pos"
+            ? value + 1
+            : value - 1;
+        changePlayerNumber(newValue);
+    };
 
     return (
         <div className="number-selector-container">
             <p className="player-number-value">
-                {`${gameData.playerNumber} joueurs`}
+                {`${value} ${name}`}
             </p>
             <button
                 className="inc-dec-button"
@@ -18,11 +49,11 @@ const Slider: React.FC = () => {
             </button>
             <input
                 className="player-number-selector"
-                max="49"
-                min="4"
+                max={max}
+                min={min}
                 type="range"
-                value={gameData.playerNumber}
-                onChange={changePlayerNumber}
+                value={value}
+                onChange={sliderChangePlayerNumber}
             />
             <button
                 className="inc-dec-button"

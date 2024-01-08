@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 
 import {
     gameActions,
     gameState,
+    Slider,
     useAppDispatch,
     useAppSelector
 } from "@/IndexImporter";
@@ -13,20 +14,7 @@ const CreateGame: React.FC = () => {
     const dispatch = useAppDispatch();
     const gameData = useAppSelector(gameState.GameData);
 
-    const changePlayerNumber = (
-        event: React.ChangeEvent<HTMLInputElement>
-    ) => {
-        let inputValue = parseInt(event.target.value, 10);
-        if (isNaN(inputValue) || inputValue < 4 || inputValue > 49) {
-            inputValue = 8;
-        }
-        dispatch(gameActions.changePlayerNumber(inputValue));
-    };
-
-    const buttonChangePlayerNumber = (param: string) => {
-        const newValue = param === "pos"
-            ? gameData.playerNumber + 1
-            : gameData.playerNumber - 1;
+    const changePlayerNumber = (newValue: number) => {
         dispatch(gameActions.changePlayerNumber(newValue));
     };
 
@@ -39,33 +27,13 @@ const CreateGame: React.FC = () => {
             >
                 1) Choisir le nombre de joueurs
             </p>
-            <div className="number-selector-container">
-                <p className="player-number-value">
-                    {`${gameData.playerNumber} joueurs`}
-                </p>
-                <button
-                    className="inc-dec-button"
-                    type="button"
-                    onClick={() => buttonChangePlayerNumber("neg")}
-                >
-                    -
-                </button>
-                <input
-                    className="player-number-selector"
-                    max="49"
-                    min="4"
-                    type="range"
-                    value={gameData.playerNumber}
-                    onChange={changePlayerNumber}
-                />
-                <button
-                    className="inc-dec-button"
-                    type="button"
-                    onClick={() => buttonChangePlayerNumber("pos")}
-                >
-                    +
-                </button>
-            </div>
+            <Slider
+                changePlayerNumber={changePlayerNumber}
+                max={49}
+                min={4}
+                name="joueurs"
+                value={gameData.playerNumber}
+            />
             <p
                 className="create-game-step-title"
             >
