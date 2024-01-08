@@ -7,6 +7,8 @@ import RolesDescription from "@page/RolesDescription/RolesDescription";
 import RulesDescription from "@page/RulesDescription/RulesDescription";
 import StartingPage from "@page/StartingPage/StartingPage";
 
+import CompoRolesList from "@parts/CompoRolesList/CompoRolesList";
+import NewGameRules from "@parts/NewGameRules/NewGameRules";
 import Slider from "@parts/Slider/Slider";
 
 export {
@@ -16,6 +18,8 @@ export {
     RolesDescription,
     RulesDescription,
     StartingPage,
+    CompoRolesList,
+    NewGameRules,
     Slider
 };
 

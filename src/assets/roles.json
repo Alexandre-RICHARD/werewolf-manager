@@ -1,0 +1,244 @@
+{
+    "eventData": [
+        {
+            "id": 1,
+            "rolename": "Villageois",
+            "illusName": "simple-villageois.png",
+            "group": "Les Villageois",
+            "max": 9,
+            "origin": "Loups-Garous"
+        },
+        {
+            "id": 2,
+            "rolename": "Simple Loup-garou",
+            "illusName": "simple-loup-garou.png",
+            "group": "Les Loups-garous",
+            "max": 4,
+            "origin": "Loups-Garous"
+        },
+        {
+            "id": 3,
+            "rolename": "Chasseur",
+            "illusName": "chasseur.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Loups-Garous"
+        },
+        {
+            "id": 4,
+            "rolename": "Petite fille",
+            "illusName": "petite-fille.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Loups-Garous"
+        },
+        {
+            "id": 5,
+            "rolename": "Voleur",
+            "illusName": "voleur.png",
+            "group": "Les Ambigus",
+            "max": 1,
+            "origin": "Loups-Garous"
+        },
+        {
+            "id": 6,
+            "rolename": "Voyante",
+            "illusName": "voyante.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Loups-Garous"
+        },
+        {
+            "id": 7,
+            "rolename": "Cupidon",
+            "illusName": "cupidon.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Loups-Garous"
+        },
+        {
+            "id": 8,
+            "rolename": "Sorcière",
+            "illusName": "sorciere.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Loups-Garous"
+        },
+        {
+            "id": 9,
+            "rolename": "Salvateur",
+            "illusName": "salvateur.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Nouvelle Lune"
+        },
+        {
+            "id": 10,
+            "rolename": "Joueur de flûte",
+            "illusName": "joueur-de-flute.png",
+            "group": "Les Solitaires",
+            "max": 1,
+            "origin": "Nouvelle Lune"
+        },
+        {
+            "id": 11,
+            "rolename": "Bouc-émissaire",
+            "illusName": "bouc-emissaire.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Nouvelle Lune"
+        },
+        {
+            "id": 12,
+            "rolename": "Idiot du village",
+            "illusName": "idiot-du-village.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Nouvelle Lune"
+        },
+        {
+            "id": 13,
+            "rolename": "Ancien",
+            "illusName": "ancien.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Nouvelle Lune"
+        },
+        {
+            "id": 14,
+            "rolename": "Corbeau",
+            "illusName": "corbeau.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Les Villageois"
+        },
+        {
+            "id": 15,
+            "rolename": "Loup-Garou blanc",
+            "illusName": "loup-blanc.png",
+            "group": "Les Solitaires",
+            "max": 1,
+            "origin": "Les Villageois"
+        },
+        {
+            "id": 16,
+            "rolename": "Deux sœurs",
+            "illusName": "deux-soeurs.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 17,
+            "rolename": "Ange",
+            "illusName": "ange.png",
+            "group": "Les Solitaires",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 18,
+            "rolename": "Grand-Méchant-Loup",
+            "illusName": "grand-mechant-loup.png",
+            "group": "Les Loups-garous",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 19,
+            "rolename": "Chevalier à l'Épée Rouillée",
+            "illusName": "chevalier-a-l-epee-rouillee.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 20,
+            "rolename": "Infect Père des Loups",
+            "illusName": "infect-pere-des-loups.png",
+            "group": "Les Loups-garous",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 21,
+            "rolename": "Comédien",
+            "illusName": "comedien.png",
+            "group": "Les Ambigus",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 22,
+            "rolename": "Juge Bègue",
+            "illusName": "juge-begue.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 23,
+            "rolename": "Servante Dévouée",
+            "illusName": "servante-devouee.png",
+            "group": "Les Ambigus",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 24,
+            "rolename": "Montreur d'Ours",
+            "illusName": "montreur-d-ours.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 25,
+            "rolename": "Trois Frères",
+            "illusName": "trois-freres.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 26,
+            "rolename": "Chien-Loup",
+            "illusName": "chien-loup.png",
+            "group": "Les Ambigus",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 27,
+            "rolename": "Enfant Sauvage",
+            "illusName": "enfant-sauvage.png",
+            "group": "Les Ambigus",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 28,
+            "rolename": "Renard",
+            "illusName": "renard.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 29,
+            "rolename": "Abominable Sectaire",
+            "illusName": "abominable-sectaire.png",
+            "group": "Les Solitaires",
+            "max": 1,
+            "origin": "Personnages"
+        },
+        {
+            "id": 30,
+            "rolename": "Villageois-Villageois",
+            "illusName": "villageois-villageois.png",
+            "group": "Les Villageois",
+            "max": 1,
+            "origin": "Personnages"
+        }
+    ]
+}

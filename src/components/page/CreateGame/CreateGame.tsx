@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 
 import {
+    CompoRolesList,
     gameActions,
     gameState,
+    NewGameRules,
     Slider,
     useAppDispatch,
     useAppSelector
@@ -14,7 +16,17 @@ const CreateGame: React.FC = () => {
     const dispatch = useAppDispatch();
     const gameData = useAppSelector(gameState.GameData);
 
+    const [
+        stepTwo,
+        setStepTwo
+    ] = useState("disable");
+    const [
+        stepThree,
+        setStepThree
+    ] = useState("disable");
+
     const changePlayerNumber = (newValue: number) => {
+        setStepTwo("enable");
         dispatch(gameActions.changePlayerNumber(newValue));
     };
 
@@ -22,23 +34,40 @@ const CreateGame: React.FC = () => {
         <div
             className="create-game-container"
         >
-            <p
-                className="create-game-step-title"
-            >
-                1) Choisir le nombre de joueurs
-            </p>
-            <Slider
-                changePlayerNumber={changePlayerNumber}
-                max={49}
-                min={4}
-                name="joueurs"
-                value={gameData.playerNumber}
-            />
-            <p
-                className="create-game-step-title"
-            >
-                2) Choisir la composition
-            </p>
+            <div className="create-game-step">
+                <p
+                    className="create-game-step-title"
+                >
+                    1) Choisir le nombre de joueurs
+                </p>
+                <Slider
+                    changePlayerNumber={changePlayerNumber}
+                    max={49}
+                    min={4}
+                    name="joueurs"
+                    value={gameData.playerNumber}
+                />
+            </div>
+            <div className="create-game-step">
+                <p
+                    className={`create-game-step-title ${stepTwo}`}
+                >
+                    2) Choisir la composition
+                </p>
+                {stepTwo === "enable"
+                    ? <CompoRolesList />
+                    : null}
+            </div>
+            <div className="create-game-step">
+                <p
+                    className={`create-game-step-title ${stepThree}`}
+                >
+                    3) Personnaliser les règles
+                </p>
+                {stepThree === "enable"
+                    ? <NewGameRules />
+                    : null}
+            </div>
         </div>
     );
 };
