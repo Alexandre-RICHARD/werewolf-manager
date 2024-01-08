@@ -31,18 +31,27 @@ const CreateGame: React.FC = () => {
     };
 
     return (
-        <>
-            <p>
-                1) Choisir le nombre de joueur
+        <div
+            className="create-game-container"
+        >
+            <p
+                className="create-game-step-title"
+            >
+                1) Choisir le nombre de joueurs
             </p>
             <div className="number-selector-container">
+                <p className="player-number-value">
+                    {`${gameData.playerNumber} joueurs`}
+                </p>
                 <button
+                    className="inc-dec-button"
                     type="button"
                     onClick={() => buttonChangePlayerNumber("neg")}
                 >
                     -
                 </button>
                 <input
+                    className="player-number-selector"
                     max="49"
                     min="4"
                     type="range"
@@ -50,16 +59,19 @@ const CreateGame: React.FC = () => {
                     onChange={changePlayerNumber}
                 />
                 <button
+                    className="inc-dec-button"
                     type="button"
                     onClick={() => buttonChangePlayerNumber("pos")}
                 >
                     +
                 </button>
             </div>
-            <p>
+            <p
+                className="create-game-step-title"
+            >
                 2) Choisir la composition
             </p>
-        </>
+        </div>
     );
 };
 

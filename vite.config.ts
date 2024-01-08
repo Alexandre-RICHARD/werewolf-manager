@@ -8,6 +8,8 @@ export default defineConfig({
             "@": path.resolve(__dirname, "./src"),
             "@assets": path.resolve(__dirname, "./src/assets"),
             "@components": path.resolve(__dirname, "./src/components"),
+            "@page": path.resolve(__dirname, "./src/components/page"),
+            "@parts": path.resolve(__dirname, "./src/components/parts"),
             "@store": path.resolve(__dirname, "./src/store"),
             "@slices": path.resolve(__dirname, "./src/store/slices"),
             "@styles": path.resolve(__dirname, "./src/styles"),

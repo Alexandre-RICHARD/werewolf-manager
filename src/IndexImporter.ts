@@ -1,11 +1,13 @@
 // =============================================================================
 // ? Components
 import App from "@components/App";
-import CreateGame from "@components/CreateGame/CreateGame";
-import ProfilPage from "@components/ProfilPage/ProfilPage";
-import RolesDescription from "@components/RolesDescription/RolesDescription";
-import RulesDescription from "@components/RulesDescription/RulesDescription";
-import StartingPage from "@components/StartingPage/StartingPage";
+import CreateGame from "@page/CreateGame/CreateGame";
+import ProfilPage from "@page/ProfilPage/ProfilPage";
+import RolesDescription from "@page/RolesDescription/RolesDescription";
+import RulesDescription from "@page/RulesDescription/RulesDescription";
+import StartingPage from "@page/StartingPage/StartingPage";
+
+import Slider from "@parts/Slider/Slider";
 
 export {
     App,
@@ -13,7 +15,8 @@ export {
     ProfilPage,
     RolesDescription,
     RulesDescription,
-    StartingPage
+    StartingPage,
+    Slider
 };
 
 // =============================================================================
