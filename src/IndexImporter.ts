@@ -46,6 +46,14 @@ export {
 
 // =============================================================================
 
+// ? Assets
+
+import {rolesData} from "@assets/roles.json";
+
+export {rolesData};
+
+// =============================================================================
+
 // ? Types and interfaces
 import type {
     AppDispatch, AppStore, RootState

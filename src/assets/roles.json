@@ -1,5 +1,5 @@
 {
-    "eventData": [
+    "rolesData": [
         {
             "id": 1,
             "rolename": "Villageois",
@@ -240,5 +240,58 @@
             "max": 1,
             "origin": "Personnages"
         }
+    ],
+    "calledFirstNight": [
+        "Voleur",
+        "Comédien",
+        "Cupidon",
+        "Amoureux",
+        "Voyante",
+        "Renard",
+        "Juge bègue",
+        "Deux soeurs",
+        "Trois frères",
+        "Enfant sauvage",
+        "Montreur d'ours",
+        "Corbeau",
+        "Salvateur",
+        "Les Loups",
+        "Infect père des loups",
+        "Grand méchant loup",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""        
+    ],
+    "calledEachNight": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "callEachDay": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
     ]
 }

@@ -26,8 +26,16 @@ const CreateGame: React.FC = () => {
     ] = useState("disable");
 
     const changePlayerNumber = (newValue: number) => {
-        setStepTwo("enable");
+        if (stepTwo === "disable") {
+            setStepTwo("enable");
+        }
         dispatch(gameActions.changePlayerNumber(newValue));
+    };
+
+    const validateCompo = () => {
+        if (stepThree === "disable") {
+            setStepThree("enable");
+        }
     };
 
     return (
@@ -55,7 +63,11 @@ const CreateGame: React.FC = () => {
                     2) Choisir la composition
                 </p>
                 {stepTwo === "enable"
-                    ? <CompoRolesList />
+                    ? (
+                        <CompoRolesList
+                            validateCompo={validateCompo}
+                        />
+                    )
                     : null}
             </div>
             <div className="create-game-step">

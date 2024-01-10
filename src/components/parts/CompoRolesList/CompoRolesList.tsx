@@ -1,8 +1,19 @@
 import React from "react";
 
+import {rolesData} from "@/IndexImporter";
 import "./CompoRolesList.scss";
 
-const CompoRolesList: React.FC = () => {
+interface CompoRolesProps {
+    validateCompo: () => void;
+}
+
+const CompoRolesList: React.FC<CompoRolesProps> = ({validateCompo}) => {
+
+    console.log("A laide");
+    // rolesData.forEach((el) => {
+    //     console.log(el);
+    // });
+
     return (
         <>
             CompoRolesList
