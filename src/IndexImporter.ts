@@ -48,9 +48,9 @@ export {
 
 // ? Assets
 
-import {rolesData} from "@assets/roles.json";
+// import {rolesData} from "@assets/roles.json";
 
-export {rolesData};
+// export {rolesData};
 
 // =============================================================================
 
