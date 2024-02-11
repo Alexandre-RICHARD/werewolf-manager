@@ -5,11 +5,12 @@
             "@/*": ["src/*"],
             "@assets/*": ["src/assets/*"],
             "@components/*": ["src/components/*"],
-            "@page/*": ["src/components/page/*"],
+            "@pages/*": ["src/components/pages/*"],
             "@parts/*": ["src/components/parts/*"],
             "@store/*": ["src/store/*"],
             "@slices/*": ["src/store/slices/*"],
             "@styles/*": ["src/styles/*"],
+            "@svgs/*": ["src/components/svgs/*"],
             "@tests/*": ["src/tests/*"],
             "@utilities/*": ["src/utilities/*"]
         },

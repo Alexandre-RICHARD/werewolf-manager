@@ -1,0 +1,45 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .game-header-box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .cycle-count {
+            font-size: 16px;
+        }
+    
+        .step-name {
+            font-size: 16px;
+        }
+    }
+
+    .step-title {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .category {
+        font-size: 16px;
+    }
+
+    .step-description {
+        font-size: 16px;
+    }
+
+    .next-step-button {
+        background-color: #1b1b1b;
+        padding: 5px;
+        border-radius: 18px;
+        color: #ffffff;
+        width: 100%;
+    }
+}

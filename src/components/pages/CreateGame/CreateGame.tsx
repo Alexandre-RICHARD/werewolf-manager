@@ -50,7 +50,7 @@ const CreateGame: React.FC = () => {
                 </p>
                 <Slider
                     changePlayerNumber={changePlayerNumber}
-                    max={49}
+                    max={47}
                     min={4}
                     name="joueurs"
                     value={gameData.playerNumber}

@@ -3,6 +3,7 @@ import React from "react";
 import {
     CreateGame,
     gameState,
+    GameComponent,
     ProfilPage,
     RolesDescription,
     RulesDescription,
@@ -40,6 +41,11 @@ const App: React.FC = () => {
             {appStep === "profil" && (
                 <>
                     <ProfilPage />
+                </>
+            )}
+            {appStep === "fakeGame" && (
+                <>
+                    <GameComponent />
                 </>
             )}
         </>

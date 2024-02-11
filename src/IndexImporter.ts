@@ -1,11 +1,19 @@
 // =============================================================================
+
 // ? Components
+
 import App from "@components/App";
-import CreateGame from "@page/CreateGame/CreateGame";
-import ProfilPage from "@page/ProfilPage/ProfilPage";
-import RolesDescription from "@page/RolesDescription/RolesDescription";
-import RulesDescription from "@page/RulesDescription/RulesDescription";
-import StartingPage from "@page/StartingPage/StartingPage";
+
+// ? Pages
+
+import CreateGame from "@pages/CreateGame/CreateGame";
+import GameComponent from "@pages/GameComponent/GameComponent";
+import ProfilPage from "@pages/ProfilPage/ProfilPage";
+import RolesDescription from "@pages/RolesDescription/RolesDescription";
+import RulesDescription from "@pages/RulesDescription/RulesDescription";
+import StartingPage from "@pages/StartingPage/StartingPage";
+
+// ? Parts
 
 import CompoRolesList from "@parts/CompoRolesList/CompoRolesList";
 import NewGameRules from "@parts/NewGameRules/NewGameRules";
@@ -14,6 +22,7 @@ import Slider from "@parts/Slider/Slider";
 export {
     App,
     CreateGame,
+    GameComponent,
     ProfilPage,
     RolesDescription,
     RulesDescription,
@@ -25,11 +34,8 @@ export {
 
 // =============================================================================
 
-// ? Functions middlewares
-
-// =============================================================================
-
 // ? Store and slice
+
 import {setupStore} from "@store/store";
 import {useAppDispatch, useAppSelector} from "@store/hooks";
 import {gameActions, gameState} from "@slices/gameSlice";
@@ -48,13 +54,15 @@ export {
 
 // ? Assets
 
-// import {rolesData} from "@assets/roles.json";
+import {rolesData} from "@assets/roles.json";
+import {steps} from "@assets/step.json";
 
-// export {rolesData};
+export {rolesData, steps};
 
 // =============================================================================
 
 // ? Types and interfaces
+
 import type {
     AppDispatch, AppStore, RootState
 } from "@store/store";
