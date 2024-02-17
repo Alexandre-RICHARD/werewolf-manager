@@ -1,49 +1,28 @@
 // =============================================================================
-
 // ? Components
-
 import App from "@components/App";
 
-// ? Pages
+export {App};
 
-import CreateGame from "@pages/CreateGame/CreateGame";
-import GameComponent from "@pages/GameComponent/GameComponent";
-import ProfilPage from "@pages/ProfilPage/ProfilPage";
-import RolesDescription from "@pages/RolesDescription/RolesDescription";
-import RulesDescription from "@pages/RulesDescription/RulesDescription";
-import StartingPage from "@pages/StartingPage/StartingPage";
+// =============================================================================
 
-// ? Parts
+// ? Functions utilities
+import {errorSaver} from "@utilities/errorSaver";
+import {sum} from "@utilities/sum";
 
-import CompoRolesList from "@parts/CompoRolesList/CompoRolesList";
-import NewGameRules from "@parts/NewGameRules/NewGameRules";
-import Slider from "@parts/Slider/Slider";
-
-export {
-    App,
-    CreateGame,
-    GameComponent,
-    ProfilPage,
-    RolesDescription,
-    RulesDescription,
-    StartingPage,
-    CompoRolesList,
-    NewGameRules,
-    Slider
-};
+export {errorSaver, sum};
 
 // =============================================================================
 
 // ? Store and slice
-
 import {setupStore} from "@store/store";
 import {useAppDispatch, useAppSelector} from "@store/hooks";
-import {gameActions, gameState} from "@slices/gameSlice";
+import {counterActions, counterState} from "@slices/counterSlice";
 import {renderWithProviders} from "@tests/wrapperProvider";
 
 export {
-    gameActions,
-    gameState,
+    counterActions,
+    counterState,
     renderWithProviders,
     setupStore,
     useAppDispatch,
@@ -52,17 +31,7 @@ export {
 
 // =============================================================================
 
-// ? Assets
-
-import {rolesData} from "@assets/roles.json";
-import {steps} from "@assets/step.json";
-
-export {rolesData, steps};
-
-// =============================================================================
-
 // ? Types and interfaces
-
 import type {
     AppDispatch, AppStore, RootState
 } from "@store/store";
