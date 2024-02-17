@@ -1,13 +1,14 @@
 import React from "react";
 
+import {AppRouter} from "@/IndexImporter";
 import "./App.scss";
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
     return (
-        <div>
-            Starting werewolf project
-        </div>
+        <>
+            <main>
+                <AppRouter />
+            </main>
+        </>
     );
 };
-
-export default App;

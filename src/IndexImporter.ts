@@ -1,7 +1,7 @@
 // =============================================================================
 // ? Main Component
 
-import App from "@components/App";
+import {App} from "@components/App";
 
 export {App};
 
@@ -10,6 +10,13 @@ export {App};
 
 // =============================================================================
 // ? Parts Components
+
+// =============================================================================
+// ? Specials Components
+
+import {AppRouter} from "@specials/AppRouter/AppRouter";
+
+export {AppRouter};
 
 // =============================================================================
 // ? Svg/Icon Components
