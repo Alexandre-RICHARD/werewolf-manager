@@ -21,9 +21,14 @@
 ### 0.2.1 `17 février 2024`
 
 -   Add react-router-dom to the project
--   Add "specials" to the alias
--   Create Component "AppRouter" in special, wich contain React Router in futur
+-   Add 'specials' to the alias
+-   Create Component 'AppRouter' in special, wich contain React Router in futur
 -   Transform export default to named export
 -   Add slice and add it to redux
+
+### 0.2.2 `17 février 2024`
+
+-   Create 5 components that will be the main one of the app
+-   Create routes in React Router component
 
 </details>

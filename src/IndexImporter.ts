@@ -8,6 +8,20 @@ export {App};
 // =============================================================================
 // ? Pages Components
 
+import {AppOptions} from "@pages/AppOptions/AppOptions";
+import {GamePage} from "@pages/GamePage/GamePage";
+import {HomePage} from "@pages/HomePage/HomePage";
+import {RolesExplaination} from "@pages/RolesExplaination/RolesExplaination";
+import {RulesDescription} from "@pages/RulesDescription/RulesDescription";
+
+export {
+    AppOptions,
+    GamePage,
+    HomePage,
+    RolesExplaination,
+    RulesDescription
+};
+
 // =============================================================================
 // ? Parts Components
 
