@@ -1,28 +1,34 @@
 // =============================================================================
-// ? Components
+// ? Main Component
+
 import App from "@components/App";
 
 export {App};
 
 // =============================================================================
-
-// ? Functions utilities
-import {errorSaver} from "@utilities/errorSaver";
-import {sum} from "@utilities/sum";
-
-export {errorSaver, sum};
+// ? Pages Components
 
 // =============================================================================
+// ? Parts Components
 
+// =============================================================================
+// ? Svg/Icon Components
+
+// =============================================================================
+// ? Utilities Functions 
+
+import {errorSaver} from "@utilities/errorSaver";
+
+export {errorSaver};
+
+// =============================================================================
 // ? Store and slice
+
 import {setupStore} from "@store/store";
 import {useAppDispatch, useAppSelector} from "@store/hooks";
-import {counterActions, counterState} from "@slices/counterSlice";
 import {renderWithProviders} from "@tests/wrapperProvider";
 
 export {
-    counterActions,
-    counterState,
     renderWithProviders,
     setupStore,
     useAppDispatch,
@@ -30,8 +36,8 @@ export {
 };
 
 // =============================================================================
-
 // ? Types and interfaces
+
 import type {
     AppDispatch, AppStore, RootState
 } from "@store/store";
