@@ -1,2 +1,30 @@
 // To retrieve default styles and variables
 @import "@styles/index.scss";
+
+.rules-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .home-page-link {
+        align-self: flex-start;
+
+        .home-link-icon {
+            svg {
+                width: 25px;
+                height: 25px;
+                fill: $colorWhite;
+            }
+        }
+    }
+
+    .rules-container {
+        width: 100%;
+
+        &-title {
+            text-align: center;
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+}

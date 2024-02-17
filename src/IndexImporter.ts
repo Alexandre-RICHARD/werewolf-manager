@@ -41,6 +41,10 @@ export {
 // =============================================================================
 // ? Svg/Icon Components
 
+import {HomeIcon} from "@svgs/HomeIcon/HomeIcon";
+
+export {HomeIcon};
+
 // =============================================================================
 // ? Utilities Functions 
 

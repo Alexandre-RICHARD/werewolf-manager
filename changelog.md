@@ -37,4 +37,9 @@
 -   Create two dev component to help in futur
 -   Create base of App component with background image
 
+### 0.2.4 `17 février 2024`
+
+-   Create basic navigation around five main pages
+-   Add homeIcon to allow to return to HomePage in other page
+
 </details>
