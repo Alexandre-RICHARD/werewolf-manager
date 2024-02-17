@@ -29,8 +29,14 @@ export {
 // ? Specials Components
 
 import {AppRouter} from "@specials/AppRouter/AppRouter";
+import {DevInfos} from "@specials/DevInfos/DevInfos";
+import {DevOptions} from "@specials/DevOptions/DevOptions";
 
-export {AppRouter};
+export {
+    AppRouter,
+    DevInfos,
+    DevOptions
+};
 
 // =============================================================================
 // ? Svg/Icon Components

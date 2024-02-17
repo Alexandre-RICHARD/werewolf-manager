@@ -1,2 +1,26 @@
 // To retrieve default styles and variables
 @import "@styles/index.scss";
+
+.global-app {
+    background-color: $colorBlack;
+    min-height: 100svh;
+    min-width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    main {
+        background: url("../assets/images/background.png");
+        color: $colorWhite;
+
+        &.size-320 {
+            min-width: 320px;
+            width: 320px;
+            min-height: 620px;
+            height: 620px;
+            padding: 15px;
+            border-radius: 15px;
+        }
+    }
+}

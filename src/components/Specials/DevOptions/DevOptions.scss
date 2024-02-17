@@ -1,0 +1,9 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.dev-options {
+    padding: 20px;
+    background-color: $colorWhite;
+    height: fit-content;
+    width: fit-content;
+}

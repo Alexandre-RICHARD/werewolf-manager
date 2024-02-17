@@ -31,4 +31,10 @@
 -   Create 5 components that will be the main one of the app
 -   Create routes in React Router component
 
+### 0.2.3 `17 février 2024`
+
+-   Add some colors variables
+-   Create two dev component to help in futur
+-   Create base of App component with background image
+
 </details>
