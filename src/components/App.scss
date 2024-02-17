@@ -7,8 +7,14 @@
     min-width: 100%;
     padding: 20px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
+
+    .dev-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 
     main {
         background: url("../assets/images/background.png");

@@ -13,8 +13,10 @@ export const App: React.FC = () => {
             <main className="size-320">
                 <AppRouter />
             </main>
-            <DevInfos />
-            <DevOptions />
+            <div className="dev-container">
+                <DevOptions />
+                <DevInfos />
+            </div>
         </div>
     );
 };

@@ -6,4 +6,24 @@
     background-color: $colorWhite;
     height: fit-content;
     width: fit-content;
+
+    .checkbox-input {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .checkbox-wrapper {            
+            input + label {
+                border: 2px solid $colorBlack;
+            }
+
+            input + label svg path {
+                stroke: $colorBlack;
+            }
+        }
+
+        .checkbox-label {
+            font-size: 14px;
+        }
+    }
 }
