@@ -1,44 +1,18 @@
-import React, {useState} from "react";
+import React from "react";
 
-import {steps} from "@/IndexImporter";
+import {
+    steps,
+    NextStepButton,
+    useAppSelector,
+    werewolfState
+} from "@/IndexImporter";
 import "./GameStep.scss";
 
 export const GameStep: React.FC = () => {
-    const stepTotal = steps.length;
-    const [
-        stepNumber,
-        setStepNumber
-    ] = useState(0);
-    const [
-        cycleCount,
-        setCycleCount
-    ] = useState(1);
-
-    const findNextStep = (message: boolean) => {
-        if (!message) {
-            if (stepNumber === stepTotal - 1) {
-                setCycleCount(cycleCount + 1);
-                return 0;
-            } else {
-                return stepNumber + 1;
-            }
-        } else {
-            if (stepNumber + 1 === stepTotal) {
-                return 0;
-            } else {
-                return stepNumber + 1;
-            }
-        }
-    };
+    const {cycleCount, stepNumber} = useAppSelector(werewolfState.GameData);
 
     const currentStep = steps[stepNumber];
-    let nextStepMessage = steps[findNextStep(true)].entranceMessage;
-
-    const nextStep = () => {
-        const nextStepId = findNextStep(false);
-        setStepNumber(nextStepId);
-        nextStepMessage = steps[findNextStep(true)].entranceMessage;
-    };
+    const stepTotal = steps.length;
 
     return (
         <div className="step-container">
@@ -62,13 +36,7 @@ export const GameStep: React.FC = () => {
             <p className="step-description">
                 {currentStep.stepDescription}
             </p>
-            <button
-                className="next-step-button"
-                type="button"
-                onClick={nextStep}
-            >
-                {nextStepMessage}
-            </button>
+            <NextStepButton />
         </div>
     );
 };

@@ -26,9 +26,14 @@ export {
 // ? Parts Components
 
 import {Checkbox} from "./components/Parts/Checkbox/Checkbox";
-import {GameStep} from "@parts/GameStep/gameStep";
+import {GameStep} from "@parts/GameStep/GameStep";
+import {NextStepButton} from "@parts/NextStepButton/NextStepButton";
 
-export {Checkbox, GameStep};
+export {
+    Checkbox,
+    GameStep,
+    NextStepButton
+};
 
 // =============================================================================
 // ? Specials Components
@@ -54,8 +59,9 @@ export {HomeIcon};
 // ? Utilities Functions
 
 import {errorSaver} from "@utilities/errorSaver";
+import {stepFinder} from "./utilities/stepFinder";
 
-export {errorSaver};
+export {errorSaver, stepFinder};
 
 // =============================================================================
 // ? Assets
@@ -84,12 +90,18 @@ export {
 // =============================================================================
 // ? Types and interfaces
 
+import type {GameDataTypes} from "./types/GameDataTypes";
+import type {StepsTypes} from "./types/stepsTypes";
 import type {
     AppDispatch, AppStore, RootState
 } from "@store/store";
 
 export {
-    AppDispatch, AppStore, RootState
+    AppDispatch,
+    AppStore,
+    GameDataTypes,
+    RootState,
+    StepsTypes
 };
 
 // =============================================================================

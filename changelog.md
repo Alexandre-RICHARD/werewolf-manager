@@ -52,4 +52,13 @@
 -   Add Steps.json data file, to got all step wich will append during game
 -   Add GameStep component, to handle the sequence of step
 
+### 0.2.7 `18 février 2024`
+
+-   Add a dedicated component to the next step button
+-   Add a dedicated utilitie file to handle the logic in searching the next valid step
+-   Move ShowSleepOrAwakeScreen in GameData object in slice
+-   Add some new variable in this object
+-   Add them to dev info component, arrange style to more readability
+-   Add types .d.ts files to handle GameData and Steps types
+
 </details>
