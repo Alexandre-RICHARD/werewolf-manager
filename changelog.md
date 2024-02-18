@@ -42,4 +42,14 @@
 -   Create basic navigation around five main pages
 -   Add homeIcon to allow to return to HomePage in other page
 
+### 0.2.5 `17 février 2024`
+
+-   Create Checkbox component to handle all boolean input in the futur
+-   Add WakeorSleepScreen option to DevOption and show info in devInfo
+
+### 0.2.6 `18 février 2024`
+
+-   Add Steps.json data file, to got all step wich will append during game
+-   Add GameStep component, to handle the sequence of step
+
 </details>

@@ -26,8 +26,9 @@ export {
 // ? Parts Components
 
 import {Checkbox} from "./components/Parts/Checkbox/Checkbox";
+import {GameStep} from "@parts/GameStep/gameStep";
 
-export {Checkbox};
+export {Checkbox, GameStep};
 
 // =============================================================================
 // ? Specials Components
@@ -50,11 +51,18 @@ import {HomeIcon} from "@svgs/HomeIcon/HomeIcon";
 export {HomeIcon};
 
 // =============================================================================
-// ? Utilities Functions 
+// ? Utilities Functions
 
 import {errorSaver} from "@utilities/errorSaver";
 
 export {errorSaver};
+
+// =============================================================================
+// ? Assets
+
+import {steps} from "@assets/step.json";
+
+export {steps};
 
 // =============================================================================
 // ? Store and slice

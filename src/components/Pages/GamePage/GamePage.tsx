@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
-import {HomeIcon} from "@/IndexImporter";
+import {GameStep, HomeIcon} from "@/IndexImporter";
 import "./GamePage.scss";
 
 export const GamePage: React.FC = () => {
@@ -15,6 +15,7 @@ export const GamePage: React.FC = () => {
                     <HomeIcon />
                 </NavLink>
             </div>
+            <GameStep />
         </div>
     );
 };

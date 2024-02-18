@@ -1,0 +1,1024 @@
+{
+    "steps": [
+        {
+            "stepName": "villageSleep",
+            "stepTitle": "Le village s'endort",
+            "category": "information",
+            "relatedRole": "none",
+            "time": "night",
+            "entranceMessage": "Le village s'endort",
+            "firstNight": false,
+            "stepDescription": "Tout le monde ferme les yeux et reste autant que possible silencieux"
+        },
+        {
+            "stepName": "removeRole",
+            "stepTitle": "Retirer une carte du centre",
+            "category": "information",
+            "relatedRole": "comedien",
+            "time": "night",
+            "entranceMessage": "Retirer une carte",
+            "firstNight": false,
+            "stepDescription": "En début de nuit, on retire la dernière carte que le Comédien a utilisé"
+        },
+        {
+            "stepName": "servanteWake",
+            "stepTitle": "L'ex Servante se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "[servante-devouee, juge-begue, chien-loup, enfant-sauvage]",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "servanteSign",
+            "stepTitle": "Choix du Signe come Juge",
+            "category": "judgeSign",
+            "relatedRole": "[servante-devouee, juge-begue]",
+            "time": "night",
+            "entranceMessage": "Choix du signe",
+            "firstNight": false,
+            "stepDescription": "L'ex Servante Dévouée a récupérer le rôle du Juge : elle doit maintenant définir un signe"
+        },
+        {
+            "stepName": "servanteWolf",
+            "stepTitle": "Indication de l'État du Chien-Loup",
+            "category": "information",
+            "relatedRole": "[servante-devouee, chien-loup]",
+            "time": "night",
+            "entranceMessage": "Indication de l'État",
+            "firstNight": false,
+            "stepDescription": "L'ex Servante Dévouée a récupérer le rôle du Chien-Loup : il faut lui indiquer son état"
+        },
+        {
+            "stepName": "servanteChild",
+            "stepTitle": "Indication de l'État de l'Enfant-Sauvage",
+            "category": "information",
+            "relatedRole": "[servante-devouee, enfant-sauvage]",
+            "time": "night",
+            "entranceMessage": "Indication de l'État",
+            "firstNight": false,
+            "stepDescription": "L'ex Servante Dévouée a récupérer le rôle de l'Enfant Sauvage : il faut lui indiquer son état"
+        },
+        {
+            "stepName": "servanteFake",
+            "stepTitle": "Faire semblant",
+            "category": "fakeScreen",
+            "relatedRole": "[servante-devouee, juge-begue, chien-loup, enfant-sauvage]",
+            "time": "night",
+            "entranceMessage": "Faire semblant",
+            "firstNight": false,
+            "stepDescription": "Le nouveau rôle de la Servante n'a pas besoin d'être précisé, mais c'est pour feinter les autres joueurs"
+        },
+        {
+            "stepName": "servanteSleep",
+            "stepTitle": "L'ex Servante se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "[servante-devouee, juge-begue, chien-loup, enfant-sauvage]",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "infectionWolf",
+            "stepTitle": "Mort d'un Loup d'une Infection",
+            "category": "deathAnnouncement",
+            "relatedRole": "chevalier-a-l-epee-rouillee",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": "Le Chevalier a été par les Loups et l'un deux meurt de l'infection de son épée"
+        },
+        {
+            "stepName": "infectionFake",
+            "stepTitle": "Faire semblant",
+            "category": "fakeScreen",
+            "relatedRole": "chevalier-a-l-epee-rouillee",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": "Le Chevalier n'a pas été tue par les Loups mais on fait semblant pour feinter les autres joueurs"
+        },
+        {
+            "stepName": "voleurWake",
+            "stepTitle": "Le Voleur se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "voleur",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "voleurChoice",
+            "stepTitle": "Choix du Voleur",
+            "category": "roleSelection",
+            "relatedRole": "voleur",
+            "time": "night",
+            "entranceMessage": "Choix du rôle",
+            "firstNight": true,
+            "stepDescription": "Le Voleur choisit un rôle parmi les deux ou décide de rester Villageois"
+        },
+        {
+            "stepName": "voleurSleep",
+            "stepTitle": "Le Voleur se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "voleur",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "comedienWake",
+            "stepTitle": "Le Comédien se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "comedien",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "comedienChoice",
+            "stepTitle": "Choix du Comédien",
+            "category": "roleSelection",
+            "relatedRole": "comedien",
+            "time": "night",
+            "entranceMessage": "Choix du rôle",
+            "firstNight": false,
+            "stepDescription": "Le Comédien choisit un rôle parmi ceux restant ou n'utilise pas son pouvoir"
+        },
+        {
+            "stepName": "comedienSign",
+            "stepTitle": "Choix du Signe come Juge",
+            "category": "judgeSign",
+            "relatedRole": "[comedien, juge-begue]",
+            "time": "night",
+            "entranceMessage": "Choix du signe",
+            "firstNight": false,
+            "stepDescription": "Ayant choisi le rôle du Juge Bègue, le Comédien doit maintenant définir un signe"
+        },
+        {
+            "stepName": "comedienFake",
+            "stepTitle": "Faire semblant",
+            "category": "fakeScreen",
+            "relatedRole": "comedien",
+            "time": "night",
+            "entranceMessage": "Faire semblant",
+            "firstNight": false,
+            "stepDescription": "Le dernier rôle du Comédien était discret, ainsi pour feinter les autres joueurs, il est appelé une fois de plus"
+        },
+        {
+            "stepName": "comedienSleep",
+            "stepTitle": "Le Comédien se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "comedien",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "cupidonWake",
+            "stepTitle": "Cupidon se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "cupidon",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "cupidonChoice",
+            "stepTitle": "Cupidon désigne les Amoureux",
+            "category": "selectPeople",
+            "relatedRole": "cupidon",
+            "time": "night",
+            "entranceMessage": "Sélection des Amoureux",
+            "firstNight": true,
+            "stepDescription": "Cupidon doit maintenant désigner deux Amoureux qui se protègeront"
+        },
+        {
+            "stepName": "cupidonSleep",
+            "stepTitle": "Cupidon se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "cupidon",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "amoureuxWake",
+            "stepTitle": "Les Amoureux se réveillent",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "amoureux",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "amoureuxKnow",
+            "stepTitle": "Les Amoureux se reconnaissent",
+            "category": "nothingToDo",
+            "relatedRole": "amoureux",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": true,
+            "stepDescription": "Les Amoureux se reconnaissent sans rien faire de particulier"
+        },
+        {
+            "stepName": "amoureuxSleep",
+            "stepTitle": "Les Amoureux se rendorment",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "amoureux",
+            "time": "night",
+            "entranceMessage": "Rendormez-vous",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "voyanteWake",
+            "stepTitle": "La Voyante se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "voyante",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "voyanteChoice",
+            "stepTitle": "La voyante choisit quelqu'un",
+            "category": "selectPeople",
+            "relatedRole": "voyante",
+            "time": "night",
+            "entranceMessage": "Pouvoir de voyance",
+            "firstNight": false,
+            "stepDescription": "La voyante choisit la personne dont elle souhaite connaître le rôle"
+        },
+        {
+            "stepName": "voyanteRole",
+            "stepTitle": "Indication du rôle",
+            "category": "information",
+            "relatedRole": "voyante",
+            "time": "night",
+            "entranceMessage": "Indication du rôle",
+            "firstNight": false,
+            "stepDescription": "Indiquer ce rôle à la voyante ou lui montrer la carte du joueur choisi"
+        },
+        {
+            "stepName": "voyanteSleep",
+            "stepTitle": "La Voyante se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "voyante",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "renardWake",
+            "stepTitle": "Le Renard se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "renard",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "renardChoice",
+            "stepTitle": "Le renard choisit qui flairer",
+            "category": "selectPeopleEqual",
+            "relatedRole": "renard",
+            "time": "night",
+            "entranceMessage": "Flair du Renard",
+            "firstNight": false,
+            "stepDescription": "Le Renard choisit le groupe de 3 personnes qu'il souhaite flairer pour y débusquer un Loup"
+        },
+        {
+            "stepName": "renardCamp",
+            "stepTitle": "Indication du camp",
+            "category": "information",
+            "relatedRole": "renard",
+            "time": "night",
+            "entranceMessage": "Indication du rôle",
+            "firstNight": false,
+            "stepDescription": "Indication au Renard s'il y a au moins un Loup dans ce groupe"
+        },
+        {
+            "stepName": "renardFake",
+            "stepTitle": "Faire semblant",
+            "category": "fakeScreen",
+            "relatedRole": "renard",
+            "time": "night",
+            "entranceMessage": "Faire semblant",
+            "firstNight": false,
+            "stepDescription": "Le Renard a perdu son pouvoir durant les nuits précédentes, ainsi, on l'appelle pour feinter les autres joueurs"
+        },
+        {
+            "stepName": "renardSleep",
+            "stepTitle": "Le Renard se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "renard",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "jugeWake",
+            "stepTitle": "Le Juge Bègue se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "juge-begue",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "jugeSign",
+            "stepTitle": "Choix du signe du Juge",
+            "category": "judgeSign",
+            "relatedRole": "juge-begue",
+            "time": "night",
+            "entranceMessage": "Choix du signe",
+            "firstNight": true,
+            "stepDescription": "Le Juge Bègue choisit durant la première nuit le signe qu'il utilisera le jour pour déclencher un second vote"
+        },
+        {
+            "stepName": "jugeSleep",
+            "stepTitle": "Le Juge Bègue se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "juge-begue",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "soeursChoice",
+            "stepTitle": "Réveiller les Sœurs ?",
+            "category": "choiceButton",
+            "relatedRole": "deux-sœurs",
+            "time": "night",
+            "entranceMessage": "Réveiller les Sœurs",
+            "firstNight": false,
+            "stepDescription": "Après la première, il faut choisir de réveiller ou non les Deux Sœurs"
+        },
+        {
+            "stepName": "soeursWake",
+            "stepTitle": "Les Deux Sœurs se réveillent",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "deux-sœurs",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "soeursKnow",
+            "stepTitle": "Réveil des Sœurs",
+            "category": "nothingToDo",
+            "relatedRole": "deux-sœurs",
+            "time": "night",
+            "entranceMessage": "Réveil des Sœurs",
+            "firstNight": false,
+            "stepDescription": "Il n'y a rien à faire de particulier, juste les laisser communiquer discrètement quelques instants"
+        },
+        {
+            "stepName": "soeursSleep",
+            "stepTitle": "Les Deux Sœurs se rendorment",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "deux-sœurs",
+            "time": "night",
+            "entranceMessage": "Rendormez-vous",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "brotherChoice",
+            "stepTitle": "Réveiller les Frères ?",
+            "category": "choiceButton",
+            "relatedRole": "trois-freres",
+            "time": "night",
+            "entranceMessage": "Réveiller les Frères",
+            "firstNight": false,
+            "stepDescription": "Après la première, il faut choisir de réveiller ou non les Trois Frères"
+        },
+        {
+            "stepName": "brotherWake",
+            "stepTitle": "Les Trois Frères se réveillent",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "trois-freres",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "brotherKnow",
+            "stepTitle": "Réveil des Frères",
+            "category": "nothingToDo",
+            "relatedRole": "trois-freres",
+            "time": "night",
+            "entranceMessage": "Réveil des Frères",
+            "firstNight": false,
+            "stepDescription": "Il n'y a rien à faire de particulier, juste les laisser communiquer discrètement quelques instants"
+        },
+        {
+            "stepName": "brotherSleep",
+            "stepTitle": "Les Trois Frères se rendorment",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "trois-freres",
+            "time": "night",
+            "entranceMessage": "Rendormez-vous",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "salvateurWake",
+            "stepTitle": "Le Salvateur se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "salvateur",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "salvateurChoice",
+            "stepTitle": "Protection du Salvateur",
+            "category": "selectPeople",
+            "relatedRole": "salvateur",
+            "time": "night",
+            "entranceMessage": "Protection du Salvateur",
+            "firstNight": false,
+            "stepDescription": "Le Salvateur va choisir quelqu'un qui sera protégé de l'attaque des Loups cette nuit"
+        },
+        {
+            "stepName": "salvateurSleep",
+            "stepTitle": "Le Salvateur se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "salvateur",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "chienWake",
+            "stepTitle": "Le Chien-Loup se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "chien-loup",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "chienChoice",
+            "stepTitle": "Le Chien-Loup choisit son camp",
+            "category": "choiceButton",
+            "relatedRole": "chien-loup",
+            "time": "night",
+            "entranceMessage": "Camp du Chien-Loup",
+            "firstNight": true,
+            "stepDescription": "Le Chien-Loup va choisir son rôle pour le restant de la partie"
+        },
+        {
+            "stepName": "chienSleep",
+            "stepTitle": "Le Chien-Loup se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "chien-loup",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "enfantWake",
+            "stepTitle": "L'Enfant Sauvage se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "enfant-sauvage",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "enfantChoice",
+            "stepTitle": "L'Enfant Sauvage et son modèle",
+            "category": "selectPeople",
+            "relatedRole": "enfant-sauvage",
+            "time": "night",
+            "entranceMessage": "Modèle de l'Enfant Sauvage",
+            "firstNight": true,
+            "stepDescription": "L'Enfant Sauvage choisit le modèle qui le maintiendra Villageois tant qu'il sera en vie"
+        },
+        {
+            "stepName": "enfantSleep",
+            "stepTitle": "L'Enfant Sauvage se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "enfant-sauvage",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": true,
+            "stepDescription": null
+        },
+        {
+            "stepName": "loupsWake",
+            "stepTitle": "Les Loups-Garous se réveillent",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "none",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "loupsChoice",
+            "stepTitle": "Les Loups-Garous attaquent",
+            "category": "selectPeopleEqual",
+            "relatedRole": "none",
+            "time": "night",
+            "entranceMessage": "Festin des Loups",
+            "firstNight": false,
+            "stepDescription": "Les Loups-Garous vont ensemble voter pour éliminer un membre du village"
+        },
+        {
+            "stepName": "loupsSleep",
+            "stepTitle": "Les Loups-Garous se rendorment",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "none",
+            "time": "night",
+            "entranceMessage": "Rendormez-vous",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "infectChoice",
+            "stepTitle": "L'infection du Père des Loups",
+            "category": "choiceButton",
+            "relatedRole": "infect-pere-des-loups",
+            "time": "night",
+            "entranceMessage": "Infection du Loup",
+            "firstNight": false,
+            "stepDescription": "Indiquer si l'Infect Père des Loups a décidé d'infecter la victime précédemment choisie"
+        },
+        {
+            "stepName": "grandWake",
+            "stepTitle": "Le Grand-Méchant-Loup se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "grand-mechant-loup",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "grandChoice",
+            "stepTitle": "Repas du Grand-Méchant-Loup",
+            "category": "selectPeople",
+            "relatedRole": "grand-mechant-loup",
+            "time": "night",
+            "entranceMessage": "Second festin",
+            "firstNight": false,
+            "stepDescription": "Le Grand-Méchant-Loup choisit qui sera sa victime rien qu'à lui en plus de celle avec ses confrères"
+        },
+        {
+            "stepName": "grandSleep",
+            "stepTitle": "Le Grand-Méchant-Loup se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "grand-mechant-loup",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "blancWake",
+            "stepTitle": "Le Loup-Garou Blanc se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "loup-blanc",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "blancChoice",
+            "stepTitle": "Le Loup Blanc choisit d'agir",
+            "category": "choiceButton",
+            "relatedRole": "loup-blanc",
+            "time": "night",
+            "entranceMessage": "Attaque du Loup Blanc",
+            "firstNight": false,
+            "stepDescription": "Le Loup-Garou Blanc décide s'il souhaite ou non dévorer l'un de ses confrères Loups"
+        },
+        {
+            "stepName": "blancKill",
+            "stepTitle": "Le Loup Blanc attaque",
+            "category": "selectPeople",
+            "relatedRole": "loup-blanc",
+            "time": "night",
+            "entranceMessage": "Choix du Loup Blanc",
+            "firstNight": false,
+            "stepDescription": "Le Loup-Garou Blanc choisit lequel de ses confrère il souhaite tuer"
+        },
+        {
+            "stepName": "blancFake",
+            "stepTitle": "Faire semblant",
+            "category": "fakeScreen",
+            "relatedRole": "loup-blanc",
+            "time": "night",
+            "entranceMessage": "Faire semblant",
+            "firstNight": false,
+            "stepDescription": "Le Loup-Garou Blanc a décidé de ne pas tuer l'un de ses confrères"
+        },
+        {
+            "stepName": "blancSleep",
+            "stepTitle": "Le Loup-Garou Blanc se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "loup-blanc",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "corbeauWake",
+            "stepTitle": "Le Corbeau se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "corbeau",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "corbeauChoice",
+            "stepTitle": "Le Corbeau choisit quelqu'un",
+            "category": "selectPeople",
+            "relatedRole": "corbeau",
+            "time": "night",
+            "entranceMessage": "Vote du Corbeau",
+            "firstNight": false,
+            "stepDescription": "Le Corbeau désigne une personne qui recevra 2 voix contre lui au prochain vote"
+        },
+        {
+            "stepName": "corbeauSleep",
+            "stepTitle": "Le Corbeau se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "corbeau",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "sorciereWake",
+            "stepTitle": "La Sorcière se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "sorciere",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "sorciereLChoice",
+            "stepTitle": "La Sorcière et sa potion de vie",
+            "category": "roleSelection",
+            "relatedRole": "sorciere",
+            "time": "night",
+            "entranceMessage": "Potion de vie",
+            "firstNight": false,
+            "stepDescription": "Indication à la Sorcière sur la ou les victimes des Loups, lui proposer d'en sauver une"
+        },
+        {
+            "stepName": "sorciereLFake",
+            "stepTitle": "Faire semblant",
+            "category": "fakeScreen",
+            "relatedRole": "sorciere",
+            "time": "night",
+            "entranceMessage": "Faire semblant",
+            "firstNight": false,
+            "stepDescription": "La Sorcière n'a plus de potion de vie, on prononce quand même les phrases pour tromper les autres joueurs"
+        },
+        {
+            "stepName": "sorciereKChoice",
+            "stepTitle": "La Sorcière et sa potion de mort",
+            "category": "choiceButton",
+            "relatedRole": "sorciere",
+            "time": "night",
+            "entranceMessage": "Potion de mort",
+            "firstNight": false,
+            "stepDescription": "La Sorcière décide de si elle veut utiliser sa potion de mort pour tuer quelqu'un ou non"
+        },
+        {
+            "stepName": "sorciereKKill",
+            "stepTitle": "La Sorcière élimine quelqu'un",
+            "category": "selectPeople",
+            "relatedRole": "sorciere",
+            "time": "night",
+            "entranceMessage": "Tuer quelqu'un",
+            "firstNight": false,
+            "stepDescription": "La Sorcière choisit à qui elle va donne sa potion de mort pour l'éliminer"
+        },
+        {
+            "stepName": "sorciereKFake",
+            "stepTitle": "Faire semblant",
+            "category": "fakeScreen",
+            "relatedRole": "sorciere",
+            "time": "night",
+            "entranceMessage": "Faire semblant",
+            "firstNight": false,
+            "stepDescription": "La Sorcière a décidé de ne pas utiliser sa potion de mort, on fait semblant pour tromper les autres joueurs"
+        },
+        {
+            "stepName": "sorciereSleep",
+            "stepTitle": "La Sorcière se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "sorciere",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "joueurWake",
+            "stepTitle": "Le Joueur de Flûte se réveille",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "joueur-de-flute",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "joueurChoice",
+            "stepTitle": "Charme du Joueur de Flûte",
+            "category": "selectPeopleEqual",
+            "relatedRole": "joueur-de-flute",
+            "time": "night",
+            "entranceMessage": "Charme du Joueur de Flûte",
+            "firstNight": false,
+            "stepDescription": "Le Joueur de Flûte indique les personnes qu'il souhaite charmer"
+        },
+        {
+            "stepName": "joueurFake",
+            "stepTitle": "Faire semblant",
+            "category": "fakeScreen",
+            "relatedRole": "joueur-de-flute",
+            "time": "night",
+            "entranceMessage": "Faire semblant",
+            "firstNight": false,
+            "stepDescription": "Le Joueur de Flûte ne joue plus son rôle mais on veut tromper les autres joueurs"
+        },
+        {
+            "stepName": "joueurSleep",
+            "stepTitle": "Le Joueur de Flûte se rendort",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "joueur-de-flute",
+            "time": "night",
+            "entranceMessage": "Rendors-toi",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "charmeWake",
+            "stepTitle": "Les Joueurs Charmés se réveillent",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "joueur-de-flute",
+            "time": "night",
+            "entranceMessage": "Suivant",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "charmeKnow",
+            "stepTitle": "Les Charmés se reconnaissent",
+            "category": "nothingToDo",
+            "relatedRole": "joueur-de-flute",
+            "time": "night",
+            "entranceMessage": "Joueurs charmés",
+            "firstNight": false,
+            "stepDescription": "Tous les Joueurs charmés se réveillent, se reconnaissent mais aucune action à effectuer"
+        },
+        {
+            "stepName": "charmeSleep",
+            "stepTitle": "Les Joueurs charmés se rendorment",
+            "category": "wakeUpOrSleep",
+            "relatedRole": "joueur-de-flute",
+            "time": "night",
+            "entranceMessage": "Rendormez-vous",
+            "firstNight": false,
+            "stepDescription": null
+        },
+        {
+            "stepName": "villageWake",
+            "stepTitle": "Le village se réveille",
+            "category": "information",
+            "relatedRole": "none",
+            "time": "day",
+            "entranceMessage": "Le village se réveille",
+            "firstNight": false,
+            "stepDescription": "Le jour se lève, vous pouvez tous rouvrir les yeux"
+        },
+        {
+            "stepName": "nightDeath",
+            "stepTitle": "Annonce de la ou les victimes",
+            "category": "deathAnnouncement",
+            "relatedRole": "none",
+            "time": "day",
+            "entranceMessage": "Bilan des morts",
+            "firstNight": false,
+            "stepDescription": "On liste et annonce au village la ou les victimes de la nuit"
+        },
+        {
+            "stepName": "chasseurNightKill",
+            "stepTitle": "Vengeance du Chasseur",
+            "category": "selectPeople",
+            "relatedRole": "chasseur",
+            "time": "day",
+            "entranceMessage": "Vengeance du Chasseur",
+            "firstNight": false,
+            "stepDescription": "Le Chasseur a été tué. Il élimine quelqu'un avec son fusil avant de mourir"
+        },
+        {
+            "stepName": "amoureuxNightDeath",
+            "stepTitle": "Mort par chagrin d'amour",
+            "category": "deathAnnouncement",
+            "relatedRole": "cupidon",
+            "time": "day",
+            "entranceMessage": "Chagrin d'amour",
+            "firstNight": false,
+            "stepDescription": "L'un des Amoureux est mort. Par chagrin d'amour, le deuxième va se suicider"
+        },
+        {
+            "stepName": "oursGrogne",
+            "stepTitle": "Grognement de l'Ours",
+            "category": "information",
+            "relatedRole": "montreur-d-ours",
+            "time": "day",
+            "entranceMessage": "Grognement de l'Ours",
+            "firstNight": false,
+            "stepDescription": "On indique au village si l'Ours grogne ou non, indiquant la présence d'un ou plusieurs Loups à ses côtés"
+        },
+        {
+            "stepName": "capitaineElect",
+            "stepTitle": "On élit un Capitaine ?",
+            "category": "choiceButton",
+            "relatedRole": "none",
+            "time": "day",
+            "entranceMessage": "Élire un Capitaine",
+            "firstNight": false,
+            "stepDescription": "Faut-il élire un Capitaine maintenant ?"
+        },
+        {
+            "stepName": "capitaineElection",
+            "stepTitle": "L'élection du Capitaine",
+            "category": "selectPeople",
+            "relatedRole": "none",
+            "time": "day",
+            "entranceMessage": "Élection du Capitaine",
+            "firstNight": false,
+            "stepDescription": "Le village va voter pour élire la personne qui leur servira de chef comme Capitaine"
+        },
+        {
+            "stepName": "villageVF",
+            "stepTitle": "Le vote du village",
+            "category": "selectPeopleEqual",
+            "relatedRole": "none",
+            "time": "day",
+            "entranceMessage": "Vote du village",
+            "firstNight": false,
+            "stepDescription": "Le village va voter pour l'élimination d'une personne jugée coupable"
+        },
+        {
+            "stepName": "villageVFDeath",
+            "stepTitle": "Annonce de la ou les victimes",
+            "category": "deathAnnouncement",
+            "relatedRole": "none",
+            "time": "day",
+            "entranceMessage": "Bilan des morts",
+            "firstNight": false,
+            "stepDescription": "On liste et annonce au village la ou les victimes du vote"
+        },
+        {
+            "stepName": "chasseurVFKill",
+            "stepTitle": "Vengeance du Chasseur",
+            "category": "selectPeople",
+            "relatedRole": "chasseur",
+            "time": "day",
+            "entranceMessage": "Vengeance du Chasseur",
+            "firstNight": false,
+            "stepDescription": "Le Chasseur a été tué. Il élimine quelqu'un avec son fusil avant de mourir"
+        },
+        {
+            "stepName": "amoureuxVFDeath",
+            "stepTitle": "Mort par chagrin d'amour",
+            "category": "deathAnnouncement",
+            "relatedRole": "cupidon",
+            "time": "day",
+            "entranceMessage": "Chagrin d'amour",
+            "firstNight": false,
+            "stepDescription": "L'un des Amoureux est mort. Par chagrin d'amour, le deuxième va se suicider"
+        },
+        {
+            "stepName": "boucVFChoice",
+            "stepTitle": "Le pouvoir du Bouc Émissaire",
+            "category": "selectPeople",
+            "relatedRole": "bouc-emissaire",
+            "time": "day",
+            "entranceMessage": "Pouvoir du Bouc Émissaire",
+            "firstNight": false,
+            "stepDescription": "Le Bouc Émissaire doit maintenant choisir qui pourra voter le jour prochain"
+        },
+        {
+            "stepName": "servanteVFChoice",
+            "stepTitle": "Le pouvoir de la Servante",
+            "category": "choiceButton",
+            "relatedRole": "servante-devouee",
+            "time": "day",
+            "entranceMessage": "Pouvoir de la Servante",
+            "firstNight": false,
+            "stepDescription": "La servante choisit de prendre le rôle de la personne éliminée ou non"
+        },
+        {
+            "stepName": "jugeVFChoice",
+            "stepTitle": "Le pouvoir du Juge Bègue",
+            "category": "choiceButton",
+            "relatedRole": "juge-begue",
+            "time": "day",
+            "entranceMessage": "Pouvoir du Juge Bègue",
+            "firstNight": false,
+            "stepDescription": "Le Juge Bègue a-t-il indiqué vouloir lancer un second vote ?"
+        },
+        {
+            "stepName": "villageVT",
+            "stepTitle": "Le second vote du village",
+            "category": "selectPeopleEqual",
+            "relatedRole": "juge-begue",
+            "time": "day",
+            "entranceMessage": "Second vote du village",
+            "firstNight": false,
+            "stepDescription": "Le village va une fois de plus éliminer une personne estimée coupable"
+        },
+        {
+            "stepName": "villageVTDeath",
+            "stepTitle": "Annonce de la ou les victimes",
+            "category": "deathAnnouncement",
+            "relatedRole": "juge-begue",
+            "time": "day",
+            "entranceMessage": "Bilan des morts",
+            "firstNight": false,
+            "stepDescription": "On liste et annonce au village la ou les victimes du second vote"
+        },
+        {
+            "stepName": "chasseurVTKill",
+            "stepTitle": "Vengeance du Chasseur",
+            "category": "selectPeople",
+            "relatedRole": "[juge-begue, chasseur]",
+            "time": "day",
+            "entranceMessage": "Vengeance du Chasseur",
+            "firstNight": false,
+            "stepDescription": "Le Chasseur a été tué. Il élimine quelqu'un avec son fusil avant de mourir"
+        },
+        {
+            "stepName": "amoureuxVTDeath",
+            "stepTitle": "Mort par chagrin d'amour",
+            "category": "deathAnnouncement",
+            "relatedRole": "[juge-begue, cupidon]",
+            "time": "day",
+            "entranceMessage": "Chagrin d'amour",
+            "firstNight": false,
+            "stepDescription": "L'un des Amoureux est mort. Par chagrin d'amour, le deuxième va se suicider"
+        },
+        {
+            "stepName": "boucVTChoice",
+            "stepTitle": "Le pouvoir du Bouc Émissaire",
+            "category": "selectPeople",
+            "relatedRole": "[juge-begue, bouc-emissaire]",
+            "time": "day",
+            "entranceMessage": "Pouvoir du Bouc Émissaire",
+            "firstNight": false,
+            "stepDescription": "Le Bouc Émissaire doit maintenant choisir qui pourra voter le jour prochain"
+        },
+        {
+            "stepName": "servanteVTChoice",
+            "stepTitle": "Le pouvoir de la Servante",
+            "category": "choiceButton",
+            "relatedRole": "[juge-begue, servante-devouee]",
+            "time": "day",
+            "entranceMessage": "Pouvoir de la Servante",
+            "firstNight": false,
+            "stepDescription": "La servante choisit de prendre le rôle de la personne éliminée ou non"
+        }
+    ]
+}
