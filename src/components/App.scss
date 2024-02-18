@@ -18,13 +18,50 @@
 
     main {
         background: url("../assets/images/background.png");
+        background-size: cover;
         color: $colorWhite;
 
         &.size-320 {
             min-width: 320px;
             width: 320px;
-            min-height: 620px;
-            height: 620px;
+            min-height: 600px;
+            height: 600px;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        &.size-480 {
+            min-width: 480px;
+            width: 480px;
+            min-height: 770px;
+            height: 770px;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        &.size-770 {
+            min-width: 770px;
+            width: 770px;
+            min-height: 1024px;
+            height: 1024px;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        &.size-920h {
+            min-width: 920px;
+            width: 920px;
+            min-height: 1200px;
+            height: 1200px;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        &.size-920v {
+            min-width: 1200px;
+            width: 1200px;
+            min-height: 920px;
+            height: 920px;
             padding: 15px;
             border-radius: 15px;
         }

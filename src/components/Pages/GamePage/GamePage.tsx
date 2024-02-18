@@ -15,7 +15,6 @@ export const GamePage: React.FC = () => {
                     <HomeIcon />
                 </NavLink>
             </div>
-            <GameStep />
         </div>
     );
 };

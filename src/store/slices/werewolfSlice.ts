@@ -8,6 +8,7 @@ interface WerewolfState {
 
 const initialState: WerewolfState = {
     "gameData": {
+        "appSize": "size-320",
         "showWakeSleepScreen": true,
         "playerNumber": 8,
         "stepNumber": 0,
@@ -20,11 +21,14 @@ const werewolfSlice = createSlice({
     "name": "werewolf",
     initialState,
     "reducers": {
-        "changePlayerNumber": (state, action: PayloadAction<number>) => {
-            state.gameData.playerNumber = action.payload;
+        "setAppSize": (state, action: PayloadAction<string>) => {
+            state.gameData.appSize = action.payload;
         },
         "setShowWakeSleepScreen": (state, action: PayloadAction<boolean>) => {
             state.gameData.showWakeSleepScreen = action.payload;
+        },
+        "changePlayerNumber": (state, action: PayloadAction<number>) => {
+            state.gameData.playerNumber = action.payload;
         },
         "changeStepNumber": (state, action: PayloadAction<number>) => {
             state.gameData.stepNumber = action.payload;

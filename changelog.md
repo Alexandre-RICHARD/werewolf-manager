@@ -61,4 +61,15 @@
 -   Add them to dev info component, arrange style to more readability
 -   Add types .d.ts files to handle GameData and Steps types
 
+### 0.2.8 `18 février 2024`
+
+-   Find a good way to return the right index in stepFinder. Add condition will be easy in futur
+-   Apply Prettier and Eslint in all files
+
+### 0.2.9 `18 février 2024`
+
+-   Change in wakeScreen conditional function in stepFinder, response become return
+-   Add Select input in DevOptions to handle change of app screen size
+-   This params handle classname attribution
+
 </details>

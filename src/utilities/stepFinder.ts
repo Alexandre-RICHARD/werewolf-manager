@@ -10,17 +10,15 @@ export const stepFinder = (
     const totalStep = steps.length;
 
     const wakeScreen = (step: StepsTypes) => {
-        let response = true;
         if (gameData.showWakeSleepScreen) {
-            response = true;
+            return true;
         } else {
             if (step.category !== "wakeUpOrSleep") {
-                response = true;
+                return true;
             } else {
-                response = false;
+                return false;
             }
         }
-        return response;
     };
 
     // If the next step doesn't exist, return to first one
