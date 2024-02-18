@@ -8,10 +8,7 @@ export const Checkbox: React.FC<{
     "value": boolean;
     "handleCheckbox": () => void;
 }> = ({
-    text,
-    inputName,
-    value,
-    handleCheckbox,
+    text, inputName, value, handleCheckbox,
 }) => {
     return (
         <div className="checkbox-input">
@@ -23,9 +20,7 @@ export const Checkbox: React.FC<{
                     type="checkbox"
                     onChange={handleCheckbox}
                 />
-                <label
-                    htmlFor={inputName}
-                >
+                <label htmlFor={inputName}>
                     <svg viewBox="0,0,50,50">
                         <path d="M5 30 L 20 45 L 45 5" />
                     </svg>

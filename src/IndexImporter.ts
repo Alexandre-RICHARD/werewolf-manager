@@ -15,11 +15,7 @@ import {RolesExplaination} from "@pages/RolesExplaination/RolesExplaination";
 import {RulesDescription} from "@pages/RulesDescription/RulesDescription";
 
 export {
-    AppOptions,
-    GamePage,
-    HomePage,
-    RolesExplaination,
-    RulesDescription
+    AppOptions, GamePage, HomePage, RolesExplaination, RulesDescription
 };
 
 // =============================================================================
@@ -30,9 +26,7 @@ import {GameStep} from "@parts/GameStep/GameStep";
 import {NextStepButton} from "@parts/NextStepButton/NextStepButton";
 
 export {
-    Checkbox,
-    GameStep,
-    NextStepButton
+    Checkbox, GameStep, NextStepButton
 };
 
 // =============================================================================
@@ -43,9 +37,7 @@ import {DevInfos} from "@specials/DevInfos/DevInfos";
 import {DevOptions} from "@specials/DevOptions/DevOptions";
 
 export {
-    AppRouter,
-    DevInfos,
-    DevOptions
+    AppRouter, DevInfos, DevOptions
 };
 
 // =============================================================================
@@ -97,11 +89,7 @@ import type {
 } from "@store/store";
 
 export {
-    AppDispatch,
-    AppStore,
-    GameDataTypes,
-    RootState,
-    StepsTypes
+    AppDispatch, AppStore, GameDataTypes, RootState, StepsTypes
 };
 
 // =============================================================================

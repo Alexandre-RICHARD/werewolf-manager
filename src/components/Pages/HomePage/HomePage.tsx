@@ -7,28 +7,20 @@ export const HomePage: React.FC = () => {
     return (
         <div className="home-page">
             <div className="options-box">
-                <NavLink
-                    to="/options"
-                >
+                <NavLink to="/options">
                     Options
                 </NavLink>
             </div>
             <div className="new-game">
-                <NavLink
-                    to="/game"
-                >
+                <NavLink to="/game">
                     Commencer une partie
                 </NavLink>
             </div>
             <div className="explaination">
-                <NavLink
-                    to="/roles"
-                >
+                <NavLink to="/roles">
                     Explication des rôles
                 </NavLink>
-                <NavLink
-                    to="/rules"
-                >
+                <NavLink to="/rules">
                     Règles du jeu
                 </NavLink>
             </div>

@@ -13,10 +13,10 @@ import "./NextStepButton.scss";
 export const NextStepButton: React.FC = () => {
     const dispatch = useAppDispatch();
     const gameData = useAppSelector(werewolfState.GameData);
-    const {stepNumber, nextStepNumber} = gameData;
+    const {nextStepNumber} = gameData;
 
     const nextStepHandler = () => {
-        const stepId = stepFinder(steps.slice(stepNumber + 1), gameData);
+        const stepId = stepFinder(steps, gameData);
         dispatch(werewolfActions.changeStepNumber(stepId));
     };
 

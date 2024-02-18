@@ -1,9 +1,6 @@
 import React from "react";
 
-import {
-    useAppSelector,
-    werewolfState
-} from "@/IndexImporter";
+import {useAppSelector, werewolfState} from "@/IndexImporter";
 import "./DevInfos.scss";
 
 export const DevInfos: React.FC = () => {

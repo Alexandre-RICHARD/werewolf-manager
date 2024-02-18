@@ -1,9 +1,7 @@
 import React from "react";
 
 import {
-    AppRouter,
-    DevInfos,
-    DevOptions
+    AppRouter, DevInfos, DevOptions
 } from "@/IndexImporter";
 import "./App.scss";
 
