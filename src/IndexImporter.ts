@@ -51,9 +51,14 @@ export {HomeIcon};
 // ? Utilities Functions
 
 import {errorSaver} from "@utilities/errorSaver";
+import {imageImporter} from "./utilities/imageImporter";
 import {stepFinder} from "./utilities/stepFinder";
 
-export {errorSaver, stepFinder};
+export {
+    errorSaver,
+    imageImporter,
+    stepFinder
+};
 
 // =============================================================================
 // ? Assets

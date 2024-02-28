@@ -72,4 +72,9 @@
 -   Add Select input in DevOptions to handle change of app screen size
 -   This params handle classname attribution
 
+### 0.2.10 `28 février 2024`
+
+-   Add content to HomePage, and to have image, add ImageImporter file
+-   Update dependencies
+
 </details>
