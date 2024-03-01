@@ -77,4 +77,15 @@
 -   Add content to HomePage, and to have image, add ImageImporter file
 -   Update dependencies
 
+### 0.2.11 `1er mars 2024`
+
+-   Update dependencies
+-   Add new component AppButton to handle all current and futur button of the app, wich will be uniform
+-   Add title to Dev Box
+-   Replace "Option" button to access option menu by gearIcon, new SVG component
+-   Move AppRouter outside of its folder, because it doesn't have SCSS file
+-   Change route of /game to /game/* to handle all Game Routes associeted in another router, GameRouter
+-   Thus, AppRouter, on the route /game/* call GameRouter wich handle rest of routes and deletion of GamePage component
+-   Add the first element of Game Configuration, with the Player Number Selector, with Range input
+
 </details>

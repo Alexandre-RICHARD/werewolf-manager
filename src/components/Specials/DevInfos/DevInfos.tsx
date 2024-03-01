@@ -8,6 +8,9 @@ export const DevInfos: React.FC = () => {
 
     return (
         <div className="dev-infos">
+            <p className="title">
+                Devbox: Informations du state
+            </p>
             <p>
                 {`showWakeScreen : ${gameData.showWakeSleepScreen}`}
             </p>

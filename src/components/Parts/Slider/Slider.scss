@@ -1,0 +1,97 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.player-number-selector-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .player-number-box {
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        align-items: center;
+
+        .player-count {
+            width: 100px;
+            text-align: center;
+        }
+
+        .inc-dec-button {
+            width: 30px;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 10px;
+            height: 30px;
+            user-select: none;
+        }
+    }
+
+    $diamondSize: 14px;
+    $lineHeight: 4px;
+    $selectorSize: 25px;
+
+    .selector-line {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+
+        .player-number-selector {
+            width: 100%;
+            height: $selectorSize;
+
+            &::-webkit-slider-runnable-track {
+                width: 100%;
+                height: $lineHeight;
+            }
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: $selectorSize;
+                height: $selectorSize;
+                background: transparent;
+                border: $lineHeight solid $colorWhite;
+                background-color: rgba($colorWhite, 0.2);
+                border-radius: 50%;
+                cursor: pointer;
+                margin-top: calc(($selectorSize - $lineHeight) / -2);
+            }
+        }
+
+        .line-before,
+        .line-after {
+            position: absolute;
+            height: $lineHeight;
+            background-color: $colorWhite;
+            pointer-events: none;
+            width: 0;
+        }
+
+        .line-before {
+            left: 0;
+        }
+
+        .line-after {
+            right: 0;
+        }
+
+        .diamond-before,
+        .diamond-after {
+            position: absolute;
+            width: $diamondSize;
+            height: $diamondSize;
+            background-color: $colorWhite;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        .diamond-before {
+            left: calc($diamondSize * -0.85);
+        }
+
+        .diamond-after {
+            right: calc($diamondSize * -0.85);
+        }
+    }
+}

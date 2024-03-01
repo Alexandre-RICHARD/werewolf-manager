@@ -12,6 +12,11 @@
         display: flex;
         align-items: center;
         justify-content: end;
+
+        svg {
+            width: 25px;
+            fill: $colorWhite;
+        }
     }
 
     .home-page-title-box {
@@ -30,29 +35,12 @@
             text-align: center;
             line-height: 20px;
         }
-
     }
-    
+
     .explaination {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        .new-game-button,
-        .explaination-button {
-            width: 100%;
-            border-radius: 15px;
-            text-align: center;
-            margin: 6px;
-        }
-
-        .new-game-button {
-            background-color: $colorDarkGray;
-        }
-
-        .explaination-button {
-            background-color: $colorLightGray;
-        }
     }
 }

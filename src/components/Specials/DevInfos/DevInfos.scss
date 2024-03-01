@@ -7,6 +7,12 @@
     height: fit-content;
     width: fit-content;
 
+    .title {
+        text-decoration: underline 2px solid black;
+        text-underline-offset: 4px;
+        margin-bottom: 5px;
+    }
+
     p {
         font-size: 16px;
         line-height: 22px;

@@ -11,10 +11,9 @@ import "./DevOptions.scss";
 
 export const DevOptions: React.FC = () => {
     const dispatch = useAppDispatch();
-    const {
-        appSize,
-        showWakeSleepScreen,
-    } = useAppSelector(werewolfState.GameData);
+    const {appSize, showWakeSleepScreen} = useAppSelector(
+        werewolfState.GameData
+    );
 
     const handleCheckbox = () => {
         dispatch(werewolfActions.setShowWakeSleepScreen(!showWakeSleepScreen));
@@ -26,6 +25,9 @@ export const DevOptions: React.FC = () => {
 
     return (
         <div className="dev-options">
+            <p className="title">
+                Devbox: Options
+            </p>
             <Checkbox
                 handleCheckbox={handleCheckbox}
                 inputName="show-wake-sleep-screen"

@@ -5,7 +5,7 @@ import {
 
 import {
     AppOptions,
-    GamePage,
+    GameRouter,
     HomePage,
     RolesExplaination,
     RulesDescription
@@ -32,8 +32,8 @@ export const AppRouter: React.FC = () => {
                     path="/rules"
                 />
                 <Route
-                    element={<GamePage />}
-                    path="/game"
+                    element={<GameRouter />}
+                    path="/game/*"
                 />
             </Routes>
         </Router>

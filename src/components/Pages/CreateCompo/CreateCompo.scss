@@ -1,0 +1,25 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .home-link-icon {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 25px;
+            height: 25px;
+            fill: $colorWhite;
+        }
+    }
+
+    .section-title {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}

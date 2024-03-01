@@ -1,7 +1,9 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
-import {imageImporter} from "@/IndexImporter";
+import {
+    AppButton, imageImporter, OptionsGear
+} from "@/IndexImporter";
 import "./HomePage.scss";
 
 export const HomePage: React.FC = () => {
@@ -9,7 +11,7 @@ export const HomePage: React.FC = () => {
         <div className="home-page">
             <div className="options-box">
                 <NavLink to="/options">
-                    Options
+                    <OptionsGear />
                 </NavLink>
             </div>
             <div className="home-page-title-box">
@@ -17,32 +19,31 @@ export const HomePage: React.FC = () => {
                     Loup-Garou
                 </h1>
                 <p>
-                    Bienvenue sur l'application Loup-Garou pour un MJ.
-                    Soyez assisté en tant que MJ pour faire de grosses
-                    parties avec une charge mentale moindre
+                    Bienvenue sur l'application Loup-Garou pour un MJ. Votre
+                    assistant personnel pour gérer des parties avec beaucoup de
+                    monde sans problèmes.
                 </p>
-                <img
-                    src={imageImporter("werewolf-logo.png")}
-                />
+                <img src={imageImporter("werewolf-logo.png")} />
             </div>
             <div className="explaination">
-                <div className="new-game-button">
-                    <NavLink to="/game">
-                        Commencer une partie
-                    </NavLink>
-                </div>
-                <NavLink
-                    className="explaination-button"
-                    to="/roles"
-                >
-                    Explication des rôles
-                </NavLink>
-                <NavLink
-                    className="explaination-button"
-                    to="/rules"
-                >
-                    Règles du jeu
-                </NavLink>
+                <AppButton
+                    classname="new-game-button"
+                    goal="/game/create/compo"
+                    text="Commencer une partie"
+                    type="navLink"
+                />
+                <AppButton
+                    classname="explaination-button"
+                    goal="/roles"
+                    text="Explication des rôles"
+                    type="navLink"
+                />
+                <AppButton
+                    classname="explaination-button"
+                    goal="/rules"
+                    text="Règles du jeu"
+                    type="navLink"
+                />
             </div>
         </div>
     );

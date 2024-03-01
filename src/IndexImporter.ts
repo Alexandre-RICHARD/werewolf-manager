@@ -9,43 +9,47 @@ export {App};
 // ? Pages Components
 
 import {AppOptions} from "@pages/AppOptions/AppOptions";
-import {GamePage} from "@pages/GamePage/GamePage";
+import {CreateCompo} from "@pages/CreateCompo/CreateCompo";
 import {HomePage} from "@pages/HomePage/HomePage";
 import {RolesExplaination} from "@pages/RolesExplaination/RolesExplaination";
 import {RulesDescription} from "@pages/RulesDescription/RulesDescription";
 
 export {
-    AppOptions, GamePage, HomePage, RolesExplaination, RulesDescription
+    AppOptions, CreateCompo, HomePage, RolesExplaination, RulesDescription
 };
 
 // =============================================================================
 // ? Parts Components
 
+import {AppButton} from "@parts/AppButton/AppButton";
 import {Checkbox} from "./components/Parts/Checkbox/Checkbox";
 import {GameStep} from "@parts/GameStep/GameStep";
 import {NextStepButton} from "@parts/NextStepButton/NextStepButton";
+import {Slider} from "@parts/Slider/Slider";
 
 export {
-    Checkbox, GameStep, NextStepButton
+    AppButton, Checkbox, GameStep, NextStepButton, Slider
 };
 
 // =============================================================================
 // ? Specials Components
 
-import {AppRouter} from "@specials/AppRouter/AppRouter";
+import {AppRouter} from "@specials/AppRouter";
 import {DevInfos} from "@specials/DevInfos/DevInfos";
 import {DevOptions} from "@specials/DevOptions/DevOptions";
+import {GameRouter} from "@specials/GameRouter";
 
 export {
-    AppRouter, DevInfos, DevOptions
+    AppRouter, DevInfos, DevOptions, GameRouter
 };
 
 // =============================================================================
 // ? Svg/Icon Components
 
 import {HomeIcon} from "@svgs/HomeIcon/HomeIcon";
+import {OptionsGear} from "@svgs/OptionsGear/OptionsGear";
 
-export {HomeIcon};
+export {HomeIcon, OptionsGear};
 
 // =============================================================================
 // ? Utilities Functions
@@ -55,9 +59,7 @@ import {imageImporter} from "./utilities/imageImporter";
 import {stepFinder} from "./utilities/stepFinder";
 
 export {
-    errorSaver,
-    imageImporter,
-    stepFinder
+    errorSaver, imageImporter, stepFinder
 };
 
 // =============================================================================
@@ -88,7 +90,7 @@ export {
 // ? Types and interfaces
 
 import type {GameDataTypes} from "./types/GameDataTypes";
-import type {StepsTypes} from "./types/stepsTypes";
+import type {StepsTypes} from "./types/StepsTypes";
 import type {
     AppDispatch, AppStore, RootState
 } from "@store/store";
