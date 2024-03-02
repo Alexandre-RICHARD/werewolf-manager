@@ -44,6 +44,12 @@
                 width: 70%;
                 height: 70%;
             }
+            
+            &.hidden {
+                visibility: hidden;
+                pointer-events: none;
+                user-select: none;
+            }
         }
 
         .remove-role-button {

@@ -12,10 +12,11 @@ interface WerewolfState {
 
 const initialState: WerewolfState = {
     "gameData": {
-        "appSize": "size-320",
+        "appSize": "size-480",
         "showWakeSleepScreen": true,
         "playerNumber": 8,
-        "composition": [] as unknown as CompositionTypes,
+        "composition": [],
+        "playerData": [],
         "stepNumber": 0,
         "nextStepNumber": 1,
         "cycleCount": 1,
@@ -43,6 +44,12 @@ const werewolfSlice = createSlice({
         },
         "changeCycleCount": (state, action: PayloadAction<number>) => {
             state.gameData.cycleCount = action.payload;
+        },
+        "updateCompositionArray": (
+            state,
+            action: PayloadAction<CompositionTypes[]>
+        ) => {
+            state.gameData.composition = action.payload;
         },
     },
 });

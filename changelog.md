@@ -110,4 +110,12 @@
 -   Create div for each role, no logic implemented, so nothing work for now
 -   Given that 'role' from roles.json is passed as props, creation of a type file
 
+### 0.2.14 `2 mars 2024`
+
+-   Add new Types for the new Array in slice : Composition, different array from PlayerData
+-   Playerdata will be used for game, while Composition will be used for create the game with role selection
+-   Default app size (dev variable) is now on 480px
+-   Add all the logic to change the composition, changing quantity of each role
+-   Button that can't be used will be hidden
+
 </details>

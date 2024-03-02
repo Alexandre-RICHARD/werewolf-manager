@@ -1,4 +1,9 @@
 export interface CompositionTypes {
+    "roleName": string;
+    "quantity": number;
+}
+
+interface PlayerDataTypes {
     "id": string;
     "roleName": string;
     "player": string;
@@ -9,7 +14,8 @@ export interface GameDataTypes {
     "appSize": string;
     "showWakeSleepScreen": boolean;
     "playerNumber": number;
-    "composition": CompositionTypes;
+    "composition": CompositionTypes[];
+    "playerData": PlayerDataTypes[];
     "stepNumber": number;
     "nextStepNumber": number;
     "cycleCount": number;
