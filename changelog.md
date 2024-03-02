@@ -98,4 +98,16 @@
 -   Transfer of the top of CreateCompo file to a dedicated component, wich handle title and link to go back
 -   Starting of the creation of parts wich handle the composition of game's roles
 
+### 0.2.13 `2 mars 2024`
+
+-   Add a minus and plus icon as SVGs components
+-   Remove the border-radius of the app and increase padding of it
+-   Little change on DevParts, add a new font to contrast with the app
+-   Add a new font for number, because those of Inknut Antiqua are not aligned
+-   Add 'composition' object in slice to handle futur entry of the game composition
+-   Add types to handle it
+-   Create new component for the selection of role in composition
+-   Create div for each role, no logic implemented, so nothing work for now
+-   Given that 'role' from roles.json is passed as props, creation of a type file
+
 </details>

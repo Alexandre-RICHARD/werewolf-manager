@@ -27,7 +27,6 @@
             min-height: 600px;
             height: 600px;
             padding: 15px;
-            border-radius: 15px;
         }
 
         &.size-480 {
@@ -35,8 +34,7 @@
             width: 480px;
             min-height: 770px;
             height: 770px;
-            padding: 15px;
-            border-radius: 15px;
+            padding: 25px;
         }
 
         &.size-770 {
@@ -44,8 +42,7 @@
             width: 770px;
             min-height: 1024px;
             height: 1024px;
-            padding: 15px;
-            border-radius: 15px;
+            padding: 38px;
         }
 
         &.size-920h {
@@ -53,8 +50,7 @@
             width: 920px;
             min-height: 1200px;
             height: 1200px;
-            padding: 15px;
-            border-radius: 15px;
+            padding: 42px;
         }
 
         &.size-920v {
@@ -62,8 +58,7 @@
             width: 1200px;
             min-height: 920px;
             height: 920px;
-            padding: 15px;
-            border-radius: 15px;
+            padding: 42px;
         }
     }
 }

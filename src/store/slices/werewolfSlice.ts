@@ -1,6 +1,10 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
-import type {GameDataTypes, RootState} from "@/IndexImporter";
+import type {
+    CompositionTypes,
+    GameDataTypes,
+    RootState
+} from "@/IndexImporter";
 
 interface WerewolfState {
     "gameData": GameDataTypes;
@@ -11,6 +15,7 @@ const initialState: WerewolfState = {
         "appSize": "size-320",
         "showWakeSleepScreen": true,
         "playerNumber": 8,
+        "composition": [] as unknown as CompositionTypes,
         "stepNumber": 0,
         "nextStepNumber": 1,
         "cycleCount": 1,

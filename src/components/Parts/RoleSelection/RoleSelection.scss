@@ -1,0 +1,84 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.one-role {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    .role-selection-top {
+        z-index: 2;
+        height: 28%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .role-balance-score {
+            font-family: "Amita", serif;
+            font-weight: 400;
+            height: 100%;
+            width: fit-content;
+            width: 40%;
+            line-height: 150%;
+            text-align: center;
+            background-color: rgba($colorBlack, 0.6);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .role-button {
+            height: 80%;
+            width: 25%;
+            position: relative;
+            top: 2.5px;
+
+            svg {
+                fill: $colorWhite;
+                position: absolute;
+                top: 15%;
+                left: 15%;
+                width: 70%;
+                height: 70%;
+            }
+        }
+
+        .remove-role-button {
+            left: 2.5px;
+            border-radius: 2px;
+            background-color: #871d1d99;
+        }
+
+        .add-role-button {
+            right: 2.5px;
+            border-radius: 2px;
+            background-color: #25851C99;
+        }
+    }
+
+    .role-selection-bottom {
+        z-index: 2;
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .role-number {
+            font-family: "Amita", serif;
+            font-weight: 400;
+            font-size: 22px;
+            text-shadow: 0.5px 0.5px 2px $colorBlack;
+        }
+    }
+    
+    .one-role-card-image {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

@@ -1,6 +1,9 @@
 import React from "react";
 
-import {imageImporter, roles} from "@/IndexImporter";
+import {
+    roles,
+    RoleSelection
+} from "@/IndexImporter";
 import "./RolesChoice.scss";
 
 export const RolesChoice: React.FC = () => {
@@ -12,42 +15,45 @@ export const RolesChoice: React.FC = () => {
     ];
 
     return (
-        // <div className="roles-selection-container">
-        <div className="roles-list">
-            {
-                groupList.map((el) => {
-                    return (
-                        <>
-                            <p
-                                className="group-title"
-                                key={el}
-                            >
-                                {el}
-                            </p>
-                            <div className="one-role-group">
-                                {
-                                    roles
-                                        .filter((fi) => fi.group === el)
-                                        .map((ro) => {
-                                            return (
-                                                <div
-                                                    className="one-role"
-                                                    key={ro.id}
-                                                >
-                                                    <img
-                                                        className="role-illus"
-                                                        src={imageImporter(`werewolf-cards/${ro.illusName}`)}
+        <>
+            <div className="compo-infos">
+                <p>
+                    Rôles : X / X
+                </p>
+                <p>
+                    Équilibrage : +/- X
+                </p>
+            </div>
+            <div className="roles-list">
+                {
+                    groupList.map((el) => {
+                        return (
+                            <>
+                                <p
+                                    className="group-title"
+                                    key={el}
+                                >
+                                    {el}
+                                </p>
+                                <div className="one-role-group">
+                                    {
+                                        roles
+                                            .filter((fi) => fi.group === el)
+                                            .map((ro) => {
+                                                return (
+                                                    <RoleSelection
+                                                        key={ro.id}
+                                                        role={ro}
                                                     />
-                                                </div>
-                                            );
-                                        })
-                                }
-                            </div>
-                        </>
-                    );
-                })
-            }
-        </div>
-        // </div>
+                                                );
+                                            })
+                                    }
+                                </div>
+                            </>
+                        );
+                    })
+                }
+            </div>
+        </>
     );
 };

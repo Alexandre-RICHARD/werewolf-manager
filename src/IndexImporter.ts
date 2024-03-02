@@ -28,6 +28,7 @@ import {GameStep} from "@parts/GameStep/GameStep";
 import {NextStepButton} from "@parts/NextStepButton/NextStepButton";
 import {PlayerNumber} from "@parts/PlayerNumber/PlayerNumber";
 import {RolesChoice} from "@parts/RolesChoice/RolesChoice";
+import {RoleSelection} from "@parts/RoleSelection/RoleSelection";
 
 export {
     AppButton,
@@ -36,7 +37,8 @@ export {
     GameStep,
     NextStepButton,
     PlayerNumber,
-    RolesChoice
+    RolesChoice,
+    RoleSelection
 };
 
 // =============================================================================
@@ -56,12 +58,16 @@ export {
 
 import {BackIcon} from "@svgs/BackIcon";
 import {HomeIcon} from "@svgs/HomeIcon";
+import {MinusIcon} from "@svgs/MinusIcon";
 import {OptionsGear} from "@svgs/OptionsGear";
+import {PlusIcon} from "@svgs/PlusIcon";
 
 export {
     BackIcon,
     HomeIcon,
-    OptionsGear
+    MinusIcon,
+    OptionsGear,
+    PlusIcon
 };
 
 // =============================================================================
@@ -103,14 +109,22 @@ export {
 // =============================================================================
 // ? Types and interfaces
 
+import type {CompositionTypes} from "./types/GameDataTypes";
 import type {GameDataTypes} from "./types/GameDataTypes";
+import type {RolesType} from "./types/RolesType";
 import type {StepsTypes} from "./types/StepsTypes";
 import type {
     AppDispatch, AppStore, RootState
 } from "@store/store";
 
 export {
-    AppDispatch, AppStore, GameDataTypes, RootState, StepsTypes
+    AppDispatch,
+    AppStore,
+    CompositionTypes,
+    GameDataTypes,
+    RolesType,
+    RootState,
+    StepsTypes
 };
 
 // =============================================================================
