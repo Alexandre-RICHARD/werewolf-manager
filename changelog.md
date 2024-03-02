@@ -82,10 +82,20 @@
 -   Update dependencies
 -   Add new component AppButton to handle all current and futur button of the app, wich will be uniform
 -   Add title to Dev Box
--   Replace "Option" button to access option menu by gearIcon, new SVG component
+-   Replace 'Option' button to access option menu by gearIcon, new SVG component
 -   Move AppRouter outside of its folder, because it doesn't have SCSS file
 -   Change route of /game to /game/* to handle all Game Routes associeted in another router, GameRouter
 -   Thus, AppRouter, on the route /game/* call GameRouter wich handle rest of routes and deletion of GamePage component
 -   Add the first element of Game Configuration, with the Player Number Selector, with Range input
+
+### 0.2.12 `2 mars 2024`
+
+-   Add image of the game roles, they are the same like board game cards
+-   Change Slider component's name to PlayerNumber
+-   Add roles.json file, wich describe the basic data of each role
+-   Move HomeIcon and OptionsGear outside of their folder beaucse they don't have scss file
+-   Create file for futur BackIcon svg component
+-   Transfer of the top of CreateCompo file to a dedicated component, wich handle title and link to go back
+-   Starting of the creation of parts wich handle the composition of game's roles
 
 </details>

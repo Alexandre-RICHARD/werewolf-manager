@@ -9,11 +9,12 @@
     .player-number-box {
         display: flex;
         justify-content: center;
-        gap: 35px;
+        gap: 20px;
         align-items: center;
 
         .player-count {
-            width: 100px;
+            width: 120px;
+            font-size: 20px;
             text-align: center;
         }
 

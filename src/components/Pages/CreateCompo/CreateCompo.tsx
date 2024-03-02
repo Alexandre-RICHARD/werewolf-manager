@@ -1,9 +1,9 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
 
 import {
-    HomeIcon,
-    Slider,
+    ConfigHeader,
+    PlayerNumber,
+    RolesChoice,
     useAppDispatch,
     useAppSelector,
     werewolfActions,
@@ -21,25 +21,25 @@ export const CreateCompo: React.FC = () => {
     };
 
     return (
-        <div>
-            <div className="header-top">
-                <NavLink
-                    className="home-link-icon"
-                    to="/"
-                >
-                    <HomeIcon />
-                </NavLink>
-                <h2 className="section-title">
-                    Paramétrer la partie
-                </h2>
-                <div />
-            </div>
-            <Slider
+        <div className="create-compo-box">
+            <ConfigHeader
+                link="/"
+                title="Paramétrer la partie"
+                type="home"
+            />
+            <p className="config-section-title">
+                Définir le nombre de joueurs
+            </p>
+            <PlayerNumber
                 changePlayerNumber={changePlayerNumber}
                 max={47}
                 min={4}
                 value={gameData.playerNumber}
             />
+            <p className="config-section-title">
+                Choisir la composition
+            </p>
+            <RolesChoice />
         </div>
     );
 };

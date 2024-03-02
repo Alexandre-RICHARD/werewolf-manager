@@ -1,15 +1,15 @@
 import React, {useEffect} from "react";
 
-import "./Slider.scss";
+import "./PlayerNumber.scss";
 
-interface SliderProps {
+interface PlayerNumberProps {
     "changePlayerNumber": (newValue: number) => void;
     "max": number;
     "min": number;
     "value": number;
 }
 
-export const Slider: React.FC<SliderProps> = ({
+export const PlayerNumber: React.FC<PlayerNumberProps> = ({
     changePlayerNumber,
     max,
     min,

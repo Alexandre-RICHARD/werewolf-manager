@@ -1,0 +1,52 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+// .roles-selection-container {
+//     // max-height: 100%;
+//     width: 100%;
+//     font-size: 18px;
+//     // overflow: auto;
+//     border-radius: 5px;
+
+    .compo-infos {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .roles-list {
+        max-height: 100%;
+        width: 100%;
+        font-size: 18px;
+        overflow: auto;
+        border-radius: 5px;
+        padding: 4px;
+        margin: 10px 0;
+        border: 2px solid rgba($colorWhite, 0.4);
+
+        .group-title {
+            font-size: 12px;
+            text-decoration: underline;
+        }
+
+        .one-role-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+
+            .one-role {
+                width: 80px;
+                height: 80px;
+                border-radius: 5px;
+                overflow: hidden;
+
+                .role-illus {
+                }
+            }
+        }
+    }
+// }

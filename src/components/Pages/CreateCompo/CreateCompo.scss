@@ -1,25 +1,14 @@
 // To retrieve default styles and variables
 @import "@styles/index.scss";
 
-.header-top {
-    width: 100%;
+.create-compo-box {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    height: 100%;
 
-    .home-link-icon {
-        display: flex;
-        align-items: center;
-
-        svg {
-            width: 25px;
-            height: 25px;
-            fill: $colorWhite;
-        }
-    }
-
-    .section-title {
+    .config-section-title {
         font-size: 18px;
-        font-weight: 400;
+        text-align: center;
+        line-height: 24px;
     }
 }

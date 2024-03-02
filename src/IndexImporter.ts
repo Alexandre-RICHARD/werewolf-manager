@@ -23,12 +23,20 @@ export {
 
 import {AppButton} from "@parts/AppButton/AppButton";
 import {Checkbox} from "./components/Parts/Checkbox/Checkbox";
+import {ConfigHeader} from "@parts/ConfigHeader/ConfigHeader";
 import {GameStep} from "@parts/GameStep/GameStep";
 import {NextStepButton} from "@parts/NextStepButton/NextStepButton";
-import {Slider} from "@parts/Slider/Slider";
+import {PlayerNumber} from "@parts/PlayerNumber/PlayerNumber";
+import {RolesChoice} from "@parts/RolesChoice/RolesChoice";
 
 export {
-    AppButton, Checkbox, GameStep, NextStepButton, Slider
+    AppButton,
+    Checkbox,
+    ConfigHeader,
+    GameStep,
+    NextStepButton,
+    PlayerNumber,
+    RolesChoice
 };
 
 // =============================================================================
@@ -46,10 +54,15 @@ export {
 // =============================================================================
 // ? Svg/Icon Components
 
-import {HomeIcon} from "@svgs/HomeIcon/HomeIcon";
-import {OptionsGear} from "@svgs/OptionsGear/OptionsGear";
+import {BackIcon} from "@svgs/BackIcon";
+import {HomeIcon} from "@svgs/HomeIcon";
+import {OptionsGear} from "@svgs/OptionsGear";
 
-export {HomeIcon, OptionsGear};
+export {
+    BackIcon,
+    HomeIcon,
+    OptionsGear
+};
 
 // =============================================================================
 // ? Utilities Functions
@@ -65,9 +78,10 @@ export {
 // =============================================================================
 // ? Assets
 
+import {roles} from "@assets/roles.json";
 import {steps} from "@assets/step.json";
 
-export {steps};
+export {roles, steps};
 
 // =============================================================================
 // ? Store and slice
