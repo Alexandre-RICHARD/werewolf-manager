@@ -1,9 +1,6 @@
 import React from "react";
 
-import {
-    roles,
-    RoleSelection
-} from "@/IndexImporter";
+import {roles, RoleSelection} from "@/IndexImporter";
 import "./RolesChoice.scss";
 
 export const RolesChoice: React.FC = () => {
@@ -25,34 +22,27 @@ export const RolesChoice: React.FC = () => {
                 </p>
             </div>
             <div className="roles-list">
-                {
-                    groupList.map((el) => {
-                        return (
-                            <>
-                                <p
-                                    className="group-title"
-                                    key={el}
-                                >
-                                    {el}
-                                </p>
-                                <div className="one-role-group">
-                                    {
-                                        roles
-                                            .filter((fi) => fi.group === el)
-                                            .map((ro) => {
-                                                return (
-                                                    <RoleSelection
-                                                        key={ro.id}
-                                                        role={ro}
-                                                    />
-                                                );
-                                            })
-                                    }
-                                </div>
-                            </>
-                        );
-                    })
-                }
+                {groupList.map((el) => {
+                    return (
+                        <React.Fragment key={el}>
+                            <p className="group-title">
+                                {el}
+                            </p>
+                            <div className="one-role-group">
+                                {roles
+                                    .filter((fi) => fi.group === el)
+                                    .map((ro) => {
+                                        return (
+                                            <RoleSelection
+                                                key={ro.id}
+                                                role={ro}
+                                            />
+                                        );
+                                    })}
+                            </div>
+                        </React.Fragment>
+                    );
+                })}
             </div>
         </>
     );

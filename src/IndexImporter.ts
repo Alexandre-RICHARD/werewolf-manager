@@ -63,11 +63,7 @@ import {OptionsGear} from "@svgs/OptionsGear";
 import {PlusIcon} from "@svgs/PlusIcon";
 
 export {
-    BackIcon,
-    HomeIcon,
-    MinusIcon,
-    OptionsGear,
-    PlusIcon
+    BackIcon, HomeIcon, MinusIcon, OptionsGear, PlusIcon
 };
 
 // =============================================================================

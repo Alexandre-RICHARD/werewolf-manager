@@ -118,4 +118,12 @@
 -   Add all the logic to change the composition, changing quantity of each role
 -   Button that can't be used will be hidden
 
+### 0.2.15 `3 mars 2024`
+
+-   Initializing gameData.composition to avoid having to do it when loading component RoleSelection
+-   Correct the error of unique key in RolesChoice by replacing <></> with React.Fragment
+-   Remake of all composition choice logic to handle more possibility and avoid bugs
+-   Some css change, with element pointer's event, size and position
+-   Remove the balance score of roles to make room and have a more understandable interface
+
 </details>

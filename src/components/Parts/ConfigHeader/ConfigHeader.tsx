@@ -9,25 +9,27 @@ export const ConfigHeader: React.FC<{
     "type": string;
     "link": string;
 }> = ({
-    title,
-    type,
-    link,
+    title, type, link,
 }) => {
-
-
     return (
         <div className="header-top">
             <NavLink
                 className="home-link-icon"
                 to={link}
             >
-                {
-                    type === "home"
-                        ? <HomeIcon />
-                        : type === "return"
-                            ? <BackIcon />
-                            : null
-                }
+                {type === "home"
+                    ? (
+                        <>
+                            <HomeIcon />
+                        </>
+                    )
+                    : type === "return"
+                        ? (
+                            <>
+                                <BackIcon />
+                            </>
+                        )
+                        : null}
             </NavLink>
             <h2 className="section-title">
                 {title}
