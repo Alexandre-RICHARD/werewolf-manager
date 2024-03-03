@@ -126,4 +126,8 @@
 -   Some css change, with element pointer's event, size and position
 -   Remove the balance score of roles to make room and have a more understandable interface
 
+### 0.2.16 `3 mars 2024`
+
+-   Fix sccs to have both visual transition when one role is selected
+
 </details>

@@ -72,56 +72,39 @@
 
     .one-role-card-button {
         position: absolute;
-        z-index: 1;
-        width: 100%;
         height: 100%;
+        z-index: 1;
 
         .selected-cache {
+            z-index: 2;
             pointer-events: none;
             position: absolute;
             width: 100%;
             height: 100%;
         }
 
-        img {
-            width: 100%;
-            height: 100%;
+        .one-role-card-image {
             object-fit: cover;
         }
     }
 
     &.selected {
+        .selection-top {
+            .role-number {
+                opacity: 1;
+            }
+        }
+        
         .one-role-card-button {
             .selected-cache {
-                border-radius: 5px;
                 box-shadow:
                     inset 0px 0px 0px 3px #4fbb45d0,
                     inset 0px 0px 16px 12px #25851c99;
+                border-radius: 5px;
             }
 
             .one-role-card-image {
-                // transform: scale(1.2);
-            }
-        }
-
-        .selection-top {
-            // .role-button {
-            //     width: 25%;
-            //     top: 1px;
-            // }
-
-            // .decrease-role-button {
-            //     left: 1px;
-            //     border-top-left-radius: 4px;
-            // }
-
-            // .increase-role-button {
-            //     right: 1px;
-            //     border-top-right-radius: 4px;
-            // }
-
-            .role-number {
-                opacity: 1;
+                transform: scale(1.2);
             }
         }
     }
