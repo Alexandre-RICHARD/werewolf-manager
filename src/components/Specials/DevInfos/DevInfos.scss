@@ -1,0 +1,28 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.dev-infos {
+    color: $colorBlack;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 20px;
+    background-color: $colorWhite;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+
+    .title {
+        text-decoration: underline 2px solid $colorBlack;
+        text-underline-offset: 4px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

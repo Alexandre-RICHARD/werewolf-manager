@@ -1,0 +1,17 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.nav-button {
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    margin: 6px;
+}
+
+.new-game-button {
+    background-color: $colorDarkGray;
+}
+
+.explaination-button {
+    background-color: $colorLightGray;
+}

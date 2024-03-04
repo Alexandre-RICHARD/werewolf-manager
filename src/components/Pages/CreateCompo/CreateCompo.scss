@@ -1,0 +1,19 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.create-compo-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .config-section-title {
+        font-size: 18px;
+        text-align: center;
+        line-height: 24px;
+
+        .role-number-display {
+            font-family: "Amita", serif;
+            font-weight: 400;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.dev-options {
+    color: $colorBlack;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 20px;
+    background-color: $colorWhite;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+
+    .title {
+        text-decoration: underline 2px solid $colorBlack;
+        text-underline-offset: 4px;
+        margin-bottom: 10px;
+    }
+
+    .checkbox-input {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .checkbox-wrapper {
+            input + label {
+                border: 2px solid $colorBlack;
+            }
+
+            input + label svg path {
+                stroke: $colorBlack;
+            }
+        }
+    }
+
+    .select-box {
+        border: 2px solid $colorBlack;
+        color: $colorBlack;
+        overflow: hidden;
+        border-radius: 8px;
+        position: relative;
+        height: 35px;
+        display: flex;
+        align-items: center;
+
+        select {
+            line-height: 35px;
+            width: 100%;
+            padding: 0 10px;
+            cursor: pointer;
+        }
+
+        &::after {
+            content: "\25BC";
+            color: $colorWhite;
+            background-color: $colorBlack;
+            padding: 0 8px;
+            line-height: 35px;
+            height: fit-content;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            pointer-events: none;
+        }
+    }
+}

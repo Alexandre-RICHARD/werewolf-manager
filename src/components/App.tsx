@@ -1,55 +1,36 @@
 import React from "react";
 
 import {
-    CreateGame,
-    gameState,
-    GameComponent,
-    ProfilPage,
-    RolesDescription,
-    RulesDescription,
-    StartingPage,
-    useAppSelector
+    AppRouter,
+    DevInfos,
+    DevOptions,
+    useAppSelector,
+    werewolfState
 } from "@/IndexImporter";
 import "./App.scss";
 
-const App: React.FC = () => {
-    // Use the typed version create in hooks.ts
-    const appStep = useAppSelector(gameState.AppStep);
-
+export const App: React.FC = () => {
+    const {appSize} = useAppSelector(werewolfState.GameData);
+    const mode = import.meta.env.MODE;
     return (
         <>
-            {appStep === "starting" && (
-                <>
-                    <StartingPage />
-                </>
-            )}
-            {appStep === "createGame" && (
-                <>
-                    <CreateGame />
-                </>
-            )}
-            {appStep === "rules" && (
-                <>
-                    <RulesDescription />
-                </>
-            )}
-            {appStep === "roles" && (
-                <>
-                    <RolesDescription />
-                </>
-            )}
-            {appStep === "profil" && (
-                <>
-                    <ProfilPage />
-                </>
-            )}
-            {appStep === "fakeGame" && (
-                <>
-                    <GameComponent />
-                </>
-            )}
+            {mode === "dev"
+                ? (
+                    <div className="dev-wrapper">
+                        <main className={appSize}>
+                            <AppRouter />
+                        </main>
+                        <div className="dev-container">
+                            <DevOptions />
+                            <DevInfos />
+                        </div>
+                    </div>
+                )
+                : (
+                    <main>
+                        <AppRouter />
+                    </main>
+                )}
         </>
     );
 };
-
-export default App;
