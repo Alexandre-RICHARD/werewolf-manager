@@ -11,16 +11,26 @@ import "./App.scss";
 
 export const App: React.FC = () => {
     const {appSize} = useAppSelector(werewolfState.GameData);
-
+    const mode = import.meta.env.MODE;
     return (
-        <div className="global-app">
-            <main className={appSize}>
-                <AppRouter />
-            </main>
-            <div className="dev-container">
-                <DevOptions />
-                <DevInfos />
-            </div>
-        </div>
+        <>
+            {mode === "dev"
+                ? (
+                    <div className="dev-wrapper">
+                        <main className={appSize}>
+                            <AppRouter />
+                        </main>
+                        <div className="dev-container">
+                            <DevOptions />
+                            <DevInfos />
+                        </div>
+                    </div>
+                )
+                : (
+                    <main>
+                        <AppRouter />
+                    </main>
+                )}
+        </>
     );
 };

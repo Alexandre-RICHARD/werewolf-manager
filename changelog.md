@@ -130,4 +130,10 @@
 
 -   Fix sccs to have both visual transition when one role is selected
 
+### 0.2.17 `4 mars 2024`
+
+-   Update dependencies
+-   Install mode checker to build application with only the app, without dev parts
+-   Update SCSS style to match with this change and make ther render correctly even in prod
+
 </details>

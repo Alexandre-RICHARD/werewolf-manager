@@ -33,10 +33,7 @@ const ButtonIncDec: React.FC<{
 const CardButton: React.FC<{
     "imageName": string;
     "update": () => void;
-}> = ({
-    imageName,
-    update,
-}) => {
+}> = ({imageName, update}) => {
     return (
         <button
             className="one-role-card-button"
@@ -51,7 +48,6 @@ const CardButton: React.FC<{
         </button>
     );
 };
-
 
 export const RoleSelection: React.FC<{"role": RolesType}> = ({role}) => {
     const dispatch = useAppDispatch();
