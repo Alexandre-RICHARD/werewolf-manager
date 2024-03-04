@@ -225,7 +225,7 @@
             "rolename": "Comédien",
             "variableName": "comedien",
             "illusName": "comedien.png",
-            "group": "Les Ambigus",
+            "group": "Les Villageois",
             "balancing": -18,
             "max": 1,
             "compoCap": 1,

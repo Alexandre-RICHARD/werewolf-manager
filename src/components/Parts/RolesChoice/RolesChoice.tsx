@@ -15,9 +15,6 @@ export const RolesChoice: React.FC = () => {
         <>
             <div className="compo-infos">
                 <p>
-                    Rôles : X / X
-                </p>
-                <p>
                     Équilibrage : +/- X
                 </p>
             </div>

@@ -136,4 +136,9 @@
 -   Install mode checker to build application with only the app, without dev parts
 -   Update SCSS style to match with this change and make ther render correctly even in prod
 
+### 0.2.18 `4 mars 2024`
+
+-   In roles.json, change of the group belongs to the comédien
+-   Definition of the role selected and needed on the top of composition choice menu
+
 </details>
