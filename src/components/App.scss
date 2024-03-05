@@ -5,9 +5,9 @@
     min-height: 100svh;
     min-width: 100%;
     display: flex;
+    background-color: $colorBlack;
 
     .dev-wrapper {
-        background-color: $colorBlack;
         padding: 20px;
         display: flex;
         flex-direction: column;

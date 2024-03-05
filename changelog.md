@@ -141,4 +141,10 @@
 -   In roles.json, change of the group belongs to the comédien
 -   Definition of the role selected and needed on the top of composition choice menu
 
+### 0.2.19 `5 mars 2024`
+
+-   Update dependencies
+-   Add input range, disabled, to indicate the current balancing score with markers
+-   Add utilitie file to calculate the value of all markers
+
 </details>

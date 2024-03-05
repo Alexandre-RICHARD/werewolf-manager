@@ -1,6 +1,8 @@
 import React from "react";
 
-import {roles, RoleSelection} from "@/IndexImporter";
+import {
+    GameBalanceScore, roles, RoleSelection
+} from "@/IndexImporter";
 import "./RolesChoice.scss";
 
 export const RolesChoice: React.FC = () => {
@@ -13,11 +15,7 @@ export const RolesChoice: React.FC = () => {
 
     return (
         <>
-            <div className="compo-infos">
-                <p>
-                    Équilibrage : +/- X
-                </p>
-            </div>
+            <GameBalanceScore />
             <div className="roles-list">
                 {groupList.map((el) => {
                     return (

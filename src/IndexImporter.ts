@@ -24,6 +24,7 @@ export {
 import {AppButton} from "@parts/AppButton/AppButton";
 import {Checkbox} from "./components/Parts/Checkbox/Checkbox";
 import {ConfigHeader} from "@parts/ConfigHeader/ConfigHeader";
+import {GameBalanceScore} from "@parts/GameBalanceScore/GameBalanceScore";
 import {GameStep} from "@parts/GameStep/GameStep";
 import {NextStepButton} from "@parts/NextStepButton/NextStepButton";
 import {PlayerNumber} from "@parts/PlayerNumber/PlayerNumber";
@@ -34,6 +35,7 @@ export {
     AppButton,
     Checkbox,
     ConfigHeader,
+    GameBalanceScore,
     GameStep,
     NextStepButton,
     PlayerNumber,
@@ -70,11 +72,12 @@ export {
 // ? Utilities Functions
 
 import {errorSaver} from "@utilities/errorSaver";
-import {imageImporter} from "./utilities/imageImporter";
+import {imageImporter} from "@utilities/imageImporter";
+import {rangeMarkersFinder} from "@utilities/rangeMarkersFinder";
 import {stepFinder} from "./utilities/stepFinder";
 
 export {
-    errorSaver, imageImporter, stepFinder
+    errorSaver, imageImporter, rangeMarkersFinder, stepFinder
 };
 
 // =============================================================================
