@@ -29,15 +29,19 @@ export const CreateCompo: React.FC = () => {
 
     let roleNeeded = gameData.playerNumber;
 
-    if (composition.find((el) => {
-        return el.quantity === 1 && el.roleName === "voleur";
-    })) {
+    if (
+        composition.find((el) => {
+            return el.quantity === 1 && el.roleName === "voleur";
+        })
+    ) {
         roleNeeded += 2;
     }
 
-    if (composition.find((el) => {
-        return el.quantity === 1 && el.roleName === "comedien";
-    })) {
+    if (
+        composition.find((el) => {
+            return el.quantity === 1 && el.roleName === "comedien";
+        })
+    ) {
         roleNeeded += 3;
     }
 
