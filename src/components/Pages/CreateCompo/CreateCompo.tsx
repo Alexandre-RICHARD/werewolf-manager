@@ -54,27 +54,31 @@ export const CreateCompo: React.FC = () => {
                 title="Paramétrer la partie"
                 type="home"
             />
-            <p className="config-section-title">
-                Définir le nombre de joueurs
-            </p>
-            <PlayerNumber
-                changePlayerNumber={changePlayerNumber}
-                max={maxPLayer}
-                min={4}
-                value={gameData.playerNumber}
-            />
-            <p className="config-section-title">
-                <span>
-                    Choisir la composition (
-                </span>
-                <span className="role-number-display">
-                    {roleSelected + "/" + roleNeeded}
-                </span>
-                <span>
-                    )
-                </span>
-            </p>
-            <RolesChoice />
+            <section>
+                <p className="config-section-title">
+                    Définir le nombre de joueurs
+                </p>
+                <PlayerNumber
+                    changePlayerNumber={changePlayerNumber}
+                    max={maxPLayer}
+                    min={4}
+                    value={gameData.playerNumber}
+                />
+            </section>
+            <section className="overflow-handler">
+                <p className="config-section-title">
+                    <span>
+                        Choisir la composition (
+                    </span>
+                    <span className="role-number-display">
+                        {roleSelected + "/" + roleNeeded}
+                    </span>
+                    <span>
+                        )
+                    </span>
+                </p>
+                <RolesChoice />
+            </section>
         </div>
     );
 };

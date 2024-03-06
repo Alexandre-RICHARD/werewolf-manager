@@ -11,7 +11,7 @@ interface WerewolfState {
 
 const initialState: WerewolfState = {
     "gameData": {
-        "appSize": "size-480",
+        "appSize": "size-384",
         "showWakeSleepScreen": true,
         "playerNumber": 8,
         "composition": roles.map((el) => {
@@ -31,9 +31,11 @@ const werewolfSlice = createSlice({
     "name": "werewolf",
     initialState,
     "reducers": {
+        // ! DEV OPTION, TO DELETE
         "setAppSize": (state, action: PayloadAction<string>) => {
             state.gameData.appSize = action.payload;
         },
+        // ! DEV OPTION, TO DELETE
         "setShowWakeSleepScreen": (state, action: PayloadAction<boolean>) => {
             state.gameData.showWakeSleepScreen = action.payload;
         },

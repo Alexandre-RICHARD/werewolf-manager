@@ -15,14 +15,16 @@ export const HomePage: React.FC = () => {
                 </NavLink>
             </div>
             <div className="home-page-title-box">
-                <h1>
-                    Loup-Garou
-                </h1>
-                <p>
-                    Bienvenue sur l'application Loup-Garou pour un MJ. Votre
-                    assistant personnel pour gérer des parties avec beaucoup de
-                    monde sans problèmes.
-                </p>
+                <section>
+                    <h1>
+                        Loup-Garou
+                    </h1>
+                    <p>
+                        Bienvenue sur l'application Loup-Garou pour un MJ. Votre
+                        assistant personnel pour gérer des parties avec beaucoup
+                        de monde sans problèmes.
+                    </p>
+                </section>
                 <img src={imageImporter("werewolf-logo.png")} />
             </div>
             <div className="explaination">

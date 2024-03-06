@@ -15,11 +15,11 @@ export const RulesDescription: React.FC = () => {
                     <HomeIcon />
                 </NavLink>
             </div>
-            <div className="rules-container">
+            <section className="rules-container">
                 <p className="rules-container-title">
                     Règles du Loups-Garous
                 </p>
-            </div>
+            </section>
         </div>
     );
 };

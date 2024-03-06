@@ -15,11 +15,11 @@ export const AppOptions: React.FC = () => {
                     <HomeIcon />
                 </NavLink>
             </div>
-            <div className="options-container">
+            <section className="options-container">
                 <p className="options-container-title">
                     Paramètres de l'application
                 </p>
-            </div>
+            </section>
         </div>
     );
 };

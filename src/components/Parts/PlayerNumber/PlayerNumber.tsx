@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 
+import {MinusIcon, PlusIcon} from "@/IndexImporter";
 import "./PlayerNumber.scss";
 
 interface PlayerNumberProps {
@@ -60,7 +61,7 @@ export const PlayerNumber: React.FC<PlayerNumberProps> = ({
                     type="button"
                     onClick={() => buttonChangePlayerNumber("neg")}
                 >
-                    -
+                    <MinusIcon />
                 </button>
                 <p className="player-count">
                     <span>
@@ -74,7 +75,7 @@ export const PlayerNumber: React.FC<PlayerNumberProps> = ({
                     type="button"
                     onClick={() => buttonChangePlayerNumber("pos")}
                 >
-                    +
+                    <PlusIcon />
                 </button>
             </div>
             <div className="selector-line">

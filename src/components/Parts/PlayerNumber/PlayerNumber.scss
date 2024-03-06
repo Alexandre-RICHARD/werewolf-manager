@@ -16,10 +16,12 @@
             width: 120px;
             font-size: 20px;
             text-align: center;
+            line-height: 120%;
 
             span {
                 font-family: "Amita", serif;
                 font-weight: 400;
+                line-height: 120%;
             }
         }
 
@@ -30,6 +32,12 @@
             line-height: 10px;
             height: 30px;
             user-select: none;
+
+            svg {
+                fill: $colorWhite;
+                width: 70%;
+                height: 70%;
+            }
         }
     }
 

@@ -42,6 +42,9 @@ export const DevOptions: React.FC = () => {
                     <option value="size-320">
                         320px
                     </option>
+                    <option value="size-384">
+                        384px
+                    </option>
                     <option value="size-480">
                         480px
                     </option>

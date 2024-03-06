@@ -15,11 +15,11 @@ export const RolesExplaination: React.FC = () => {
                     <HomeIcon />
                 </NavLink>
             </div>
-            <div className="roles-container">
+            <section className="roles-container">
                 <p className="roles-container-title">
                     Explication des rôles
                 </p>
-            </div>
+            </section>
         </div>
     );
 };

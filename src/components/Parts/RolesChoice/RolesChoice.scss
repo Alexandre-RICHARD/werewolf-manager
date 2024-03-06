@@ -11,13 +11,9 @@
 }
 
 .roles-list {
-    max-height: 100%;
-    width: 100%;
-    font-size: 18px;
     overflow: auto;
     border-radius: 5px;
     padding: 4px;
-    margin: 10px 0;
     border: 2px solid rgba($colorWhite, 0.4);
 
     .group-title {
