@@ -147,12 +147,18 @@
 -   Added input range, disabled, to indicate the current balancing score with markers
 -   Added utilitie file to calculate the value of all markers
 
-### 0.2.20 `5 mars 2024`
+### 0.2.20 `6 mars 2024`
 
 -   Added some comments to indicate which line of code should be deleted when the project is finished
 -   Added a new dev resolution to be conform with an average of nowadays phone
 -   In PlayerNumber, replace the - and + button by their respectives SVG icon components
 -   Added a section style, wich will be used to add light background to important block
 -   Adding a div around main in order to manage the padding correctly with a percentage
+
+### 0.3.0 `7 mars 2024`
+
+-   Update dependencies
+-   Deletion of rangeMarkerFinder, because of the strategy change to handle the balance display
+-   Lots of change in GameBalanceScore, including lots styles and factorizing
 
 </details>

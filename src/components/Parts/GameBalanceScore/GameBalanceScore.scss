@@ -3,20 +3,30 @@
 
 .balancing-infos {
     .top-label {
-        display: flex;
-        justify-content: space-between;
+        position: relative;
+        height: 35px;
+
+        p {
+            position: absolute;
+            font-size: 14px;
+        }
 
         .wolf-advantage {
+            left: 0;
         }
 
         .equilibrate {
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .village-advantage {
+            right: 0;
         }
     }
 
     .balancing-range {
+        position: relative;
         display: flex;
         flex-direction: column;
 
@@ -33,19 +43,17 @@
                 width: 100%;
                 height: $lineHeight;
                 border-radius: 10px;
+                background: linear-gradient(
+                    90deg,
+                    #cb0000 0%,
+                    #ffffff 45%,
+                    #ffffff 55%,
+                    #5bcb00 100%
+                );
             }
 
             &::-webkit-slider-thumb {
                 -webkit-appearance: none;
-                width: $selectorWidth;
-                height: $selectorHeigth;
-                background: transparent;
-                border: 2px solid $colorWhite;
-                background-color: rgba($colorWhite, 0.2);
-                border-radius: 5px;
-                cursor: pointer;
-                position: relative;
-                top: calc(($selectorHeigth - $lineHeight) / -2);
             }
 
             &::-moz-range-thumb {
@@ -63,6 +71,27 @@
             &::-ms-fill-upper {
                 background: #eee;
             }
+        }
+
+        .slider-value {
+            font-family: "Amita", serif;
+            font-weight: 400;
+            font-size: 20px;
+            width: $selectorWidth;
+            height: 35px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $colorBlack;
+            background-color: $colorWhite;
+            border-radius: 5px;
+            transition: margin 0.25s ease-in-out;
+        }
+
+        .extreme-limit {
+            display: flex;
+            justify-content: space-between;
         }
 
         .range-markers {
