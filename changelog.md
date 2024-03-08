@@ -174,4 +174,9 @@
 
 -   Move all style : font-family: Amita to a specific class in index.scss to handle all app numbers
 
+### 0.3.3 `8 mars 2024`
+
+-   Added somes style to correctly handle the size of few elements in GameBalanceScore
+-   Added lot of new markers, it's no longer every 10, but every 2, the tens are more visible
+
 </details>

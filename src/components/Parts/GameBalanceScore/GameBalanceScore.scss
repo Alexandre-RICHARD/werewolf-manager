@@ -4,12 +4,13 @@
 .balancing-infos {
     .top-label {
         position: relative;
-        height: 35px;
+        height: 25px;
 
         p {
             position: absolute;
             font-size: 14px;
             transition: all 0.25s;
+            line-height: 150%;
 
             &.hidden {
                 opacity: 0;
@@ -37,7 +38,8 @@
         overflow: hidden;
 
         .balancing-cursor {
-            width: 100%;
+            width: 90%;
+            margin: auto;
             height: $selectorHeigth;
 
             &::-webkit-slider-runnable-track {
@@ -62,31 +64,42 @@
         .extreme-limit {
             display: flex;
             justify-content: space-between;
+            width: 95%;
+            margin: auto;
+            
+            span {
+                line-height: 20%;
+                margin-bottom: 20px;
+            }
         }
 
         .range-markers {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            top: -10px;
             display: flex;
             justify-content: space-between;
-            height: auto;
-            overflow: hidden;
-            font-family: "Amita", serif;
-            font-weight: 400;
+            height: 5px;
             line-height: 100%;
 
             .one-markers {
-                width: 20px;
+                width: 2px;
                 overflow: visible;
 
                 &::before {
-                    color: rgba($colorWhite, 0.6);
-                    background-color: rgba($colorWhite, 0.6);
+                    background-color: rgba($colorWhite, 0.15);
                     display: block;
                     content: "";
-                    margin: auto;
-                    margin-bottom: 3px;
                     width: 2px;
                     height: 6px;
                     text-align: center;
+                }
+
+                &.decimal {
+                    &::before {
+                        background-color: rgba($colorWhite, 0.6);
+                    }
                 }
             }
         }

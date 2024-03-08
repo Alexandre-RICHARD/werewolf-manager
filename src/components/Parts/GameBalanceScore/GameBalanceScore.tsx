@@ -11,10 +11,10 @@ import "./GameBalanceScore.scss";
 const RangeMarkers: React.FC = () => {
     const generateOptions = () => {
         const options = [];
-        for (let i = -50; i <= 50; i += 10) {
+        for (let i = -50; i <= 50; i += 2) {
             options.push(
                 <option
-                    className="one-markers"
+                    className={`one-markers ${i % 10 === 0 ? "decimal" : ""}`}
                     key={i}
                     value={i}
                 />
@@ -32,10 +32,10 @@ const RangeMarkers: React.FC = () => {
                 {generateOptions()}
             </datalist>
             <div className="extreme-limit">
-                <span>
+                <span className="numbers-font">
                     -50
                 </span>
-                <span>
+                <span className="numbers-font">
                     50
                 </span>
             </div>
