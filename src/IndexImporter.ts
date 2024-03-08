@@ -30,6 +30,7 @@ import {NextStepButton} from "@parts/NextStepButton/NextStepButton";
 import {PlayerNumber} from "@parts/PlayerNumber/PlayerNumber";
 import {RolesChoice} from "@parts/RolesChoice/RolesChoice";
 import {RoleSelection} from "@parts/RoleSelection/RoleSelection";
+import {SliderValue} from "@parts/SliderValue/SliderValue";
 
 export {
     AppButton,
@@ -40,7 +41,8 @@ export {
     NextStepButton,
     PlayerNumber,
     RolesChoice,
-    RoleSelection
+    RoleSelection,
+    SliderValue
 };
 
 // =============================================================================

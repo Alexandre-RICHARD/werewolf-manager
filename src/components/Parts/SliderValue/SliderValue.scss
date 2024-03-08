@@ -1,0 +1,21 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.slider-value {
+    font-family: "Amita", serif;
+    font-weight: 400;
+    font-size: 20px;
+    width: $selectorWidth;
+    height: $selectorHeigth;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $colorBlack;
+    background-color: $colorWhite;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.25s ease-in-out;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}

@@ -1,8 +1,10 @@
-/* eslint-disable max-lines-per-function */
 import React, {useEffect, useState} from "react";
 
 import {
-    roles, useAppSelector, werewolfState
+    roles,
+    SliderValue,
+    useAppSelector,
+    werewolfState
 } from "@/IndexImporter";
 import "./GameBalanceScore.scss";
 
@@ -66,56 +68,50 @@ export const GameBalanceScore: React.FC = () => {
         const oldValue = valueDisplay;
         const diffBalance = Math.abs(gameBalance - oldValue);
         const duration = 250;
+        const startTime = Date.now();
 
         if (diffBalance) {
-            let step = 0;
-            const interval = setInterval(() => {
-                if (!step) {
-                    setTimeout(() => {
-                        clearInterval(interval);
-                    }, duration);
+            const animate = () => {
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min(1, elapsed / duration);
+                const newValue = Math.round(
+                    oldValue + (gameBalance - oldValue) * progress
+                );
+                setValueDisplay(newValue);
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
                 }
-                if (step !== diffBalance) {
-                    const direction = oldValue < gameBalance ? 1 : -1;
-                    setValueDisplay((old) => old += direction);
-                    step += 1;
-                }
-            }, duration / diffBalance);
+            };
+
+            requestAnimationFrame(animate);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [gameBalance]);
 
-    const wolfO = gameBalance <= -5 ? (gameBalance - -5) / 8 : 0;
-    const equalO =
-        Math.abs(gameBalance) >= 5 && Math.abs(gameBalance) <= 15
-            ? (15 - Math.abs(gameBalance)) / 10
-            : Math.abs(gameBalance) < 5
-                ? 1
-                : 0;
-    const villageO = gameBalance >= 5 ? (gameBalance - 5) / 8 : 0;
-
-    const valuePosition =
-        (gameBalance < -50 ? 0 : gameBalance > 50 ? 100 : gameBalance + 50) /
-        100;
-
+    const wolfH = gameBalance > -6 ? "hidden" : "";
+    const equiH = gameBalance > 6 || gameBalance < -6 ? "hidden" : "";
+    const villH = gameBalance < 6 ? "hidden" : "";
     return (
         <div className="balancing-infos">
             <div className="top-label">
                 <p
-                    className="wolf-advantage"
-                    style={{"opacity": Math.abs(wolfO)}}
+                    className={`
+                    wolf-advantage ${wolfH}
+                    `}
                 >
                     Avantages des Loups
                 </p>
                 <p
-                    className="equilibrate"
-                    style={{"opacity": Math.abs(equalO)}}
+                    className={`
+                    equilibrate ${equiH}`}
                 >
                     Camps équilibrés
                 </p>
                 <p
-                    className="village-advantage"
-                    style={{"opacity": Math.abs(villageO)}}
+                    className={`
+                    village-advantage ${villH}
+                    `}
                 >
                     Avantage du Village
                 </p>
@@ -131,16 +127,10 @@ export const GameBalanceScore: React.FC = () => {
                     type="range"
                     value={gameBalance}
                 />
-                <div
-                    className="slider-value"
-                    style={{
-                        "marginLeft": `
-                    calc((100% - 45px) * ${valuePosition})
-                    `,
-                    }}
-                >
-                    {valueDisplay}
-                </div>
+                <SliderValue
+                    displayValue={valueDisplay}
+                    trueValue={gameBalance}
+                />
                 <RangeMarkers />
             </div>
         </div>

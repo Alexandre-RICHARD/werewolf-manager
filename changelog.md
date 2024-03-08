@@ -161,4 +161,13 @@
 -   Deletion of rangeMarkerFinder, because of the strategy change to handle the balance display
 -   Lots of change in GameBalanceScore, including lots styles and factorizing
 
+### 0.3.1 `8 mars 2024`
+
+-   Update dependencies
+-   Move variable of range input to global variable.scss
+-   Change method to handling animation change value. From setTimeout to requestAnimationFrame
+-   Move the 'hidden' logic class for message to dedicated variable
+-   Move the slider Value div to a dedicated component
+-   When slider move, the valueDiv move with it, and its border color change to match with the input range
+
 </details>
