@@ -170,4 +170,8 @@
 -   Move the slider Value div to a dedicated component
 -   When slider move, the valueDiv move with it, and its border color change to match with the input range
 
+### 0.3.2 `8 mars 2024`
+
+-   Move all style : font-family: Amita to a specific class in index.scss to handle all app numbers
+
 </details>

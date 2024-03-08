@@ -62,8 +62,8 @@ export const SliderValue: React.FC<{
     }
 
     return (
-        <div
-            className="slider-value"
+        <span
+            className="slider-value numbers-font"
             style={{
                 "marginLeft": `calc((100% - 45px) * ${valuePosition})`,
                 "backgroundImage": `linear-gradient(white, white), 
@@ -72,6 +72,6 @@ export const SliderValue: React.FC<{
             }}
         >
             {displayValue}
-        </div>
+        </span>
     );
 };

@@ -70,7 +70,7 @@ export const CreateCompo: React.FC = () => {
                     <span>
                         Choisir la composition (
                     </span>
-                    <span className="role-number-display">
+                    <span className="numbers-font">
                         {roleSelected + "/" + roleNeeded}
                     </span>
                     <span>

@@ -127,7 +127,7 @@ export const RoleSelection: React.FC<{"role": RolesType}> = ({role}) => {
                         type="decrease"
                         update={setRoleNewQuantity}
                     />
-                    <p className="role-number">
+                    <p className="role-number numbers-font">
                         {curRole.quantity}
                     </p>
                     <ButtonIncDec

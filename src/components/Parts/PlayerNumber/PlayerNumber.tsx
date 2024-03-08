@@ -64,7 +64,7 @@ export const PlayerNumber: React.FC<PlayerNumberProps> = ({
                     <MinusIcon />
                 </button>
                 <p className="player-count">
-                    <span>
+                    <span className="numbers-font">
                         {value}
                     </span>
                     {" "}
