@@ -1,3 +1,4 @@
+/* eslint-disable @stylistic/max-len */
 import React from "react";
 
 import "./SliderValue.scss";
@@ -38,40 +39,44 @@ export const SliderValue: React.FC<{
     "displayValue": number;
     "trueValue": number;
 }> = ({displayValue, trueValue}) => {
-    const valuePosition =
-        (trueValue < -50 ? 0 : trueValue > 50 ? 100 : trueValue + 50) / 100;
-
-    let leftColor = "";
-    let rightColor = "";
 
     const valueDiv = document.querySelector(".slider-value") as HTMLDivElement;
     const sliderRange = document.querySelector(
         ".balancing-cursor"
     ) as HTMLDivElement;
 
-    let leftBorder = 0;
-    let rightBorder = 0;
     if (valueDiv && sliderRange) {
-        const valueWidth = valueDiv.offsetWidth;
-        const margin = parseFloat(window.getComputedStyle(valueDiv).marginLeft);
-        const sliderWidth = sliderRange.offsetWidth;
-        leftBorder = (margin / sliderWidth) * 100;
-        rightBorder = ((margin + valueWidth) / sliderWidth) * 100;
-        leftColor = colorCalculator(leftBorder);
-        rightColor = colorCalculator(rightBorder);
-    }
+        const valuePosition =
+        (trueValue < -50 ? -50 : trueValue > 50 ? 50 : trueValue) / 100;
+        const valueW = valueDiv.offsetWidth;
+        const rangeW = sliderRange.offsetWidth;
+        const position = valuePosition * rangeW + rangeW / 2;
 
-    return (
-        <span
-            className="slider-value numbers-font"
-            style={{
-                "marginLeft": `calc((100% - 45px) * ${valuePosition})`,
-                "backgroundImage": `linear-gradient(white, white), 
+        const leftColor = colorCalculator((position - valueW / 2) / rangeW * 100);
+        const rightColor = colorCalculator((position + valueW / 2) / rangeW * 100);
+
+        return (
+            <span
+                className="slider-value numbers-font"
+                style={{
+                    "transform": `
+                    translateX(calc(${valuePosition * rangeW}px - 50%))
+                `,
+                    "backgroundImage": `linear-gradient(white, white), 
             linear-gradient(to right, ${leftColor}, ${rightColor})
             `,
-            }}
-        >
-            {displayValue}
-        </span>
-    );
+                }}
+            >
+                {displayValue}
+            </span>
+        );
+    } else {
+        return (
+            <span
+                className="slider-value numbers-font"
+            >
+                {displayValue}
+            </span>
+        );
+    }
 };

@@ -32,10 +32,10 @@ const RangeMarkers: React.FC = () => {
                 {generateOptions()}
             </datalist>
             <div className="extreme-limit">
-                <span className="numbers-font">
+                <span className="min numbers-font">
                     -50
                 </span>
-                <span className="numbers-font">
+                <span className="max numbers-font">
                     50
                 </span>
             </div>

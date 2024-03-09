@@ -64,12 +64,20 @@
         .extreme-limit {
             display: flex;
             justify-content: space-between;
-            width: 95%;
+            width: 90%;
             margin: auto;
             
             span {
                 line-height: 20%;
                 margin-bottom: 20px;
+
+                &.min {
+                    transform: translateX(-50%);
+                }
+
+                &.max {
+                    transform: translateX(50%);
+                }
             }
         }
 
