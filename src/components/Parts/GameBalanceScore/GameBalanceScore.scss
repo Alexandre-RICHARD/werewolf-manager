@@ -66,10 +66,12 @@
             justify-content: space-between;
             width: 90%;
             margin: auto;
-            
+            max-height: 21px;
+
             span {
                 line-height: 20%;
                 margin-bottom: 20px;
+                transition: margin 0.25s;
 
                 &.min {
                     transform: translateX(-50%);
@@ -94,6 +96,8 @@
             .one-markers {
                 width: 2px;
                 overflow: visible;
+                position: relative;
+                transition: margin 0.25s;
 
                 &::before {
                     background-color: rgba($colorWhite, 0.15);

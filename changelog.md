@@ -179,4 +179,14 @@
 -   Added somes style to correctly handle the size of few elements in GameBalanceScore
 -   Added lot of new markers, it's no longer every 10, but every 2, the tens are more visible
 
+### 0.3.4 `9 mars 2024`
+
+-   Adapt markers on BalanceScore to be a right place
+-   Upgrade method wich handle the position of slider value, to match with more sizeScreen, and more precisely
+
+### 0.3.5 `9 mars 2024`
+
+-   Added a system to move range markers when dragging near them
+-   Corrected a spelling mistake
+
 </details>

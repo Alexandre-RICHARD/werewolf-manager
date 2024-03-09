@@ -1,4 +1,3 @@
-/* eslint-disable @stylistic/max-len */
 import React from "react";
 
 import "./SliderValue.scss";
@@ -39,7 +38,6 @@ export const SliderValue: React.FC<{
     "displayValue": number;
     "trueValue": number;
 }> = ({displayValue, trueValue}) => {
-
     const valueDiv = document.querySelector(".slider-value") as HTMLDivElement;
     const sliderRange = document.querySelector(
         ".balancing-cursor"
@@ -47,13 +45,17 @@ export const SliderValue: React.FC<{
 
     if (valueDiv && sliderRange) {
         const valuePosition =
-        (trueValue < -50 ? -50 : trueValue > 50 ? 50 : trueValue) / 100;
+            (trueValue < -50 ? -50 : trueValue > 50 ? 50 : trueValue) / 100;
         const valueW = valueDiv.offsetWidth;
         const rangeW = sliderRange.offsetWidth;
         const position = valuePosition * rangeW + rangeW / 2;
 
-        const leftColor = colorCalculator((position - valueW / 2) / rangeW * 100);
-        const rightColor = colorCalculator((position + valueW / 2) / rangeW * 100);
+        const leftColor = colorCalculator(
+            ((position - valueW / 2) / rangeW) * 100
+        );
+        const rightColor = colorCalculator(
+            ((position + valueW / 2) / rangeW) * 100
+        );
 
         return (
             <span
@@ -72,9 +74,7 @@ export const SliderValue: React.FC<{
         );
     } else {
         return (
-            <span
-                className="slider-value numbers-font"
-            >
+            <span className="slider-value numbers-font">
                 {displayValue}
             </span>
         );

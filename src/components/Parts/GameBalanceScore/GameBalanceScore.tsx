@@ -8,14 +8,25 @@ import {
 } from "@/IndexImporter";
 import "./GameBalanceScore.scss";
 
-const RangeMarkers: React.FC = () => {
+const RangeMarkers: React.FC<{"value": number}> = ({value}) => {
     const generateOptions = () => {
         const options = [];
         for (let i = -50; i <= 50; i += 2) {
+            const limit = 13;
+            const centerL = 7;
+            let gap = 0;
+            const overLimitValue = value < -50 ? -50 : value > 50 ? 50 : value;
+            const diff = Math.abs(overLimitValue - i);
+
+            if (diff <= limit) {
+                gap = (1 - (diff - centerL) / (limit - centerL)) * 12;
+                if (diff <= centerL) gap = 12;
+            }
             options.push(
                 <option
                     className={`one-markers ${i % 10 === 0 ? "decimal" : ""}`}
                     key={i}
+                    style={{"marginTop": `${gap}px`}}
                     value={i}
                 />
             );
@@ -32,10 +43,16 @@ const RangeMarkers: React.FC = () => {
                 {generateOptions()}
             </datalist>
             <div className="extreme-limit">
-                <span className="min numbers-font">
+                <span
+                    className="min numbers-font"
+                    style={{"marginTop": `${value < -36 ? 12 : 0}px`}}
+                >
                     -50
                 </span>
-                <span className="max numbers-font">
+                <span
+                    className="max numbers-font"
+                    style={{"marginTop": `${value > 36 ? 12 : 0}px`}}
+                >
                     50
                 </span>
             </div>
@@ -100,7 +117,7 @@ export const GameBalanceScore: React.FC = () => {
                     wolf-advantage ${wolfH}
                     `}
                 >
-                    Avantages des Loups
+                    Avantage des Loups
                 </p>
                 <p
                     className={`
@@ -131,7 +148,7 @@ export const GameBalanceScore: React.FC = () => {
                     displayValue={valueDisplay}
                     trueValue={gameBalance}
                 />
-                <RangeMarkers />
+                <RangeMarkers value={gameBalance} />
             </div>
         </div>
     );
