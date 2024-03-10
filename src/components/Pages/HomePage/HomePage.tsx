@@ -29,19 +29,19 @@ export const HomePage: React.FC = () => {
             </div>
             <div className="explaination">
                 <AppButton
-                    classname="new-game-button"
+                    classname="dark-gray"
                     goal="/game/create/compo"
                     text="Commencer une partie"
                     type="navLink"
                 />
                 <AppButton
-                    classname="explaination-button"
+                    classname="light-gray"
                     goal="/roles"
                     text="Explication des rôles"
                     type="navLink"
                 />
                 <AppButton
-                    classname="explaination-button"
+                    classname="light-gray"
                     goal="/rules"
                     text="Règles du jeu"
                     type="navLink"

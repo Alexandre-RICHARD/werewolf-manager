@@ -11,7 +11,9 @@ interface WerewolfState {
 
 const initialState: WerewolfState = {
     "gameData": {
+        // ! DEV OPTION, TO DELETE
         "appSize": "size-384",
+        // ! DEV OPTION, TO DELETE
         "showWakeSleepScreen": true,
         "playerNumber": 8,
         "composition": roles.map((el) => {
@@ -20,6 +22,7 @@ const initialState: WerewolfState = {
                 "quantity": 0,
             };
         }),
+        "balanceScore": 0,
         "playerData": [],
         "stepNumber": 0,
         "nextStepNumber": 1,
@@ -56,6 +59,21 @@ const werewolfSlice = createSlice({
             action: PayloadAction<CompositionTypes[]>
         ) => {
             state.gameData.composition = action.payload;
+            state.gameData.balanceScore = state.gameData.composition
+                .reduce((sum, role) => {
+                    let balanceScore = 0;
+                    if (role.quantity > 0) {
+                        const foundedRole = roles.find((fi) => {
+                            return fi.variableName === role.roleName;
+                        });
+                        if (foundedRole) {
+                            balanceScore =
+                            role.quantity *
+                            foundedRole.balancing;
+                        }
+                    }
+                    return sum + balanceScore;
+                }, 0);
         },
     },
 });

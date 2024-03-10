@@ -15,6 +15,7 @@ export interface GameDataTypes {
     "showWakeSleepScreen": boolean;
     "playerNumber": number;
     "composition": CompositionTypes[];
+    "balanceScore": number;
     "playerData": PlayerDataTypes[];
     "stepNumber": number;
     "nextStepNumber": number;

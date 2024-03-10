@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 
 import {
-    roles,
     SliderValue,
     useAppSelector,
     werewolfState
@@ -61,29 +60,16 @@ const RangeMarkers: React.FC<{"value": number}> = ({value}) => {
 };
 
 export const GameBalanceScore: React.FC = () => {
-    const {composition} = useAppSelector(werewolfState.GameData);
+    const {balanceScore} = useAppSelector(werewolfState.GameData);
 
     const [
         valueDisplay,
         setValueDisplay
     ] = useState(0);
 
-    const gameBalance = composition.reduce((sum, role) => {
-        let balanceScore = 0;
-        if (role.quantity > 0) {
-            const foundedRole = roles.find((fi) => {
-                return fi.variableName === role.roleName;
-            });
-            if (foundedRole) {
-                balanceScore = role.quantity * foundedRole.balancing;
-            }
-        }
-        return sum + balanceScore;
-    }, 0);
-
     useEffect(() => {
         const oldValue = valueDisplay;
-        const diffBalance = Math.abs(gameBalance - oldValue);
+        const diffBalance = Math.abs(balanceScore - oldValue);
         const duration = 250;
         const startTime = Date.now();
 
@@ -92,7 +78,7 @@ export const GameBalanceScore: React.FC = () => {
                 const elapsed = Date.now() - startTime;
                 const progress = Math.min(1, elapsed / duration);
                 const newValue = Math.round(
-                    oldValue + (gameBalance - oldValue) * progress
+                    oldValue + (balanceScore - oldValue) * progress
                 );
                 setValueDisplay(newValue);
 
@@ -104,11 +90,11 @@ export const GameBalanceScore: React.FC = () => {
             requestAnimationFrame(animate);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [gameBalance]);
+    }, [balanceScore]);
 
-    const wolfH = gameBalance > -6 ? "hidden" : "";
-    const equiH = gameBalance > 6 || gameBalance < -6 ? "hidden" : "";
-    const villH = gameBalance < 6 ? "hidden" : "";
+    const wolfH = balanceScore > -6 ? "hidden" : "";
+    const equiH = balanceScore > 6 || balanceScore < -6 ? "hidden" : "";
+    const villH = balanceScore < 6 ? "hidden" : "";
     return (
         <div className="balancing-infos">
             <div className="top-label">
@@ -142,13 +128,13 @@ export const GameBalanceScore: React.FC = () => {
                     min={-50}
                     step={1}
                     type="range"
-                    value={gameBalance}
+                    value={balanceScore}
                 />
                 <SliderValue
                     displayValue={valueDisplay}
-                    trueValue={gameBalance}
+                    trueValue={balanceScore}
                 />
-                <RangeMarkers value={gameBalance} />
+                <RangeMarkers value={balanceScore} />
             </div>
         </div>
     );
