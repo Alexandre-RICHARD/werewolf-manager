@@ -7,5 +7,6 @@ export interface RolesType {
     "balancing": number;
     "max": number;
     "compoCap": number;
+    "comedianCanTake": boolean;
     "origin": string;
 }

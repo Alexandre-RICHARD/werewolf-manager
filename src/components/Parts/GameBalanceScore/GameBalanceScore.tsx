@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 import {
-    SliderValue,
-    useAppSelector,
-    werewolfState
+    SliderValue, useAppSelector, werewolfState
 } from "@/IndexImporter";
 import "./GameBalanceScore.scss";
 
@@ -93,7 +91,7 @@ export const GameBalanceScore: React.FC = () => {
     }, [balanceScore]);
 
     const wolfH = balanceScore > -6 ? "hidden" : "";
-    const equiH = balanceScore > 6 || balanceScore < -6 ? "hidden" : "";
+    const equiH = balanceScore >= 6 || balanceScore <= -6 ? "hidden" : "";
     const villH = balanceScore < 6 ? "hidden" : "";
     return (
         <div className="balancing-infos">

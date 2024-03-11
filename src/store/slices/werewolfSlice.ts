@@ -59,8 +59,8 @@ const werewolfSlice = createSlice({
             action: PayloadAction<CompositionTypes[]>
         ) => {
             state.gameData.composition = action.payload;
-            state.gameData.balanceScore = state.gameData.composition
-                .reduce((sum, role) => {
+            state.gameData.balanceScore = state.gameData.composition.reduce(
+                (sum, role) => {
                     let balanceScore = 0;
                     if (role.quantity > 0) {
                         const foundedRole = roles.find((fi) => {
@@ -68,12 +68,13 @@ const werewolfSlice = createSlice({
                         });
                         if (foundedRole) {
                             balanceScore =
-                            role.quantity *
-                            foundedRole.balancing;
+                                role.quantity * foundedRole.balancing;
                         }
                     }
                     return sum + balanceScore;
-                }, 0);
+                },
+                0
+            );
         },
     },
 });

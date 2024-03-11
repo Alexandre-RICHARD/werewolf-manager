@@ -9,6 +9,7 @@
             "balancing": 4,
             "max": 9,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Loups-Garous"
         },
         {
@@ -20,6 +21,7 @@
             "balancing": -16,
             "max": 4,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Loups-Garous"
         },
         {
@@ -31,6 +33,7 @@
             "balancing": 7,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Loups-Garous"
         },
         {
@@ -42,6 +45,7 @@
             "balancing": 15,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Loups-Garous"
         },
         {
@@ -53,6 +57,7 @@
             "balancing": -9,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Loups-Garous"
         },
         {
@@ -64,6 +69,7 @@
             "balancing": 7,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Loups-Garous"
         },
         {
@@ -75,6 +81,7 @@
             "balancing": 4,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Loups-Garous"
         },
         {
@@ -86,6 +93,7 @@
             "balancing": 8,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Loups-Garous"
         },
         {
@@ -97,6 +105,7 @@
             "balancing": 7,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Nouvelle Lune"
         },
         {
@@ -108,6 +117,7 @@
             "balancing": -7,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Nouvelle Lune"
         },
         {
@@ -119,6 +129,7 @@
             "balancing": 5,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Nouvelle Lune"
         },
         {
@@ -130,6 +141,7 @@
             "balancing": 5,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Nouvelle Lune"
         },
         {
@@ -141,6 +153,7 @@
             "balancing": 5,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Nouvelle Lune"
         },
         {
@@ -152,6 +165,7 @@
             "balancing": 6,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Les Villageois"
         },
         {
@@ -163,6 +177,7 @@
             "balancing": -13,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Les Villageois"
         },
         {
@@ -174,6 +189,7 @@
             "balancing": 5,
             "max": 2,
             "compoCap": 2,
+            "comedianCanTake": false,
             "origin": "Personnages"
         },
         {
@@ -185,6 +201,7 @@
             "balancing": 4,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Personnages"
         },
         {
@@ -196,6 +213,7 @@
             "balancing": -25,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Personnages"
         },
         {
@@ -207,6 +225,7 @@
             "balancing": 6,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Personnages"
         },
         {
@@ -218,6 +237,7 @@
             "balancing": -24,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Personnages"
         },
         {
@@ -229,6 +249,7 @@
             "balancing": -18,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Personnages"
         },
         {
@@ -240,6 +261,7 @@
             "balancing": 6,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Personnages"
         },
         {
@@ -251,6 +273,7 @@
             "balancing": 5,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Personnages"
         },
         {
@@ -262,6 +285,7 @@
             "balancing": 7,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Personnages"
         },
         {
@@ -273,6 +297,7 @@
             "balancing": 5,
             "max": 3,
             "compoCap": 3,
+            "comedianCanTake": false,
             "origin": "Personnages"
         },
         {
@@ -284,6 +309,7 @@
             "balancing": -12,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Personnages"
         },
         {
@@ -295,6 +321,7 @@
             "balancing": -10,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Personnages"
         },
         {
@@ -306,6 +333,7 @@
             "balancing": 7,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": true,
             "origin": "Personnages"
         },
         {
@@ -317,6 +345,7 @@
             "balancing": -5,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Personnages"
         },
         {
@@ -328,6 +357,7 @@
             "balancing": 5,
             "max": 1,
             "compoCap": 1,
+            "comedianCanTake": false,
             "origin": "Personnages"
         }
     ]

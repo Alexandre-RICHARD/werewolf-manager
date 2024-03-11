@@ -189,4 +189,17 @@
 -   Added a system to move range markers when dragging near them
 -   Corrected a spelling mistake
 
+### 0.3.6 `10 mars 2024`
+
+-   Move GameBalanceScore to Redux Store, to avoid recalculation at multiples locations
+-   It's updated when composition array change
+-   Change class affectation for nextStep Button
+-   Starting to work on compo validation and nextStepButton if this step
+
+### 0.3.7 `11 mars 2024`
+
+-   Add in roles.json key-value pair for if comedian can take role
+-   In GameBalanceScore, add '=' sign in one operation to handle all case
+-   Modify class and colors for AppButton
+
 </details>

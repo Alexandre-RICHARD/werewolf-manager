@@ -8,10 +8,16 @@
     margin: 8px 0;
 }
 
-.dark-gray {
+.primary {
     background-color: $colorDarkGray;
 }
 
-.light-gray {
+.secondary {
     background-color: $colorLightGray;
+}
+
+.disable {
+    background-color: $colorLightGrayTransparant;
+    color: $colorSilver;
+    cursor: not-allowed;
 }
