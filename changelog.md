@@ -211,4 +211,9 @@
 -   Added handling for errorMessage when click on nextStep in Create Compo component
 -   Adapt AppButton to be a button with onClick callback and not only a NavLink
 
+### 0.3.9 `14 mars 2024`
+
+-   For all pages components, add a second class to handle global style of the page, style located in index.scss
+-   Handle Routes to new components
+
 </details>

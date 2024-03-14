@@ -8,7 +8,7 @@ import "./HomePage.scss";
 
 export const HomePage: React.FC = () => {
     return (
-        <div className="home-page">
+        <div className="pages-container home-page">
             <div className="options-box">
                 <NavLink to="/options">
                     <OptionsGear />

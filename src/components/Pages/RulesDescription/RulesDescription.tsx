@@ -6,7 +6,7 @@ import "./RulesDescription.scss";
 
 export const RulesDescription: React.FC = () => {
     return (
-        <div className="rules-description">
+        <div className="pages-container rules-description">
             <div className="home-page-link">
                 <NavLink
                     className="home-link-icon"

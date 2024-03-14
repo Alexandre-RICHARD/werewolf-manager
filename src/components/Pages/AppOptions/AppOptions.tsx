@@ -6,7 +6,7 @@ import "./AppOptions.scss";
 
 export const AppOptions: React.FC = () => {
     return (
-        <div className="app-options">
+        <div className="pages-container app-options">
             <div className="home-page-link">
                 <NavLink
                     className="home-link-icon"

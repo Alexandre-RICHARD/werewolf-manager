@@ -6,7 +6,7 @@ import "./RolesExplaination.scss";
 
 export const RolesExplaination: React.FC = () => {
     return (
-        <div className="roles-explaination">
+        <div className="pages-container roles-explaination">
             <div className="home-page-link">
                 <NavLink
                     className="home-link-icon"

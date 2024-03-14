@@ -1,7 +1,9 @@
 import React from "react";
 import {Routes, Route} from "react-router-dom";
 
-import {CreateCompo} from "@/IndexImporter";
+import {
+    ComedienRoles, CreateCompo, PlayerName
+} from "@/IndexImporter";
 
 export const GameRouter: React.FC = () => {
     return (
@@ -9,6 +11,14 @@ export const GameRouter: React.FC = () => {
             <Route
                 element={<CreateCompo />}
                 path="/create/compo"
+            />
+            <Route
+                element={<ComedienRoles />}
+                path="/create/comedien"
+            />
+            <Route
+                element={<PlayerName />}
+                path="/create/name"
             />
         </Routes>
     );

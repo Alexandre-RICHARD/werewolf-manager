@@ -9,8 +9,10 @@ export {App};
 // ? Pages Components
 
 import {AppOptions} from "@pages/AppOptions/AppOptions";
+import {ComedienRoles} from "@pages/ComedienRoles/ComedienRoles";
 import {CreateCompo} from "@pages/CreateCompo/CreateCompo";
 import {HomePage} from "@pages/HomePage/HomePage";
+import {PlayerName} from "@pages/PlayerName/PlayerName";
 import {RolesExplaination} from "@pages/RolesExplaination/RolesExplaination";
 import {RulesDescription} from "@pages/RulesDescription/RulesDescription";
 
@@ -22,13 +24,11 @@ export {
 // ? Parts Components
 
 import {AppButton} from "@parts/AppButton/AppButton";
-import {Checkbox} from "./components/Parts/Checkbox/Checkbox";
-import {ComedienRoles} from "@parts/ComedienRoles/ComedienRoles";
+import {Checkbox} from "@parts/Checkbox/Checkbox";
 import {ConfigHeader} from "@parts/ConfigHeader/ConfigHeader";
 import {GameBalanceScore} from "@parts/GameBalanceScore/GameBalanceScore";
 import {GameStep} from "@parts/GameStep/GameStep";
 import {NextStepButton} from "@parts/NextStepButton/NextStepButton";
-import {PlayerName} from "@parts/PlayerName/PlayerName";
 import {PlayerNumber} from "@parts/PlayerNumber/PlayerNumber";
 import {RolesChoice} from "@parts/RolesChoice/RolesChoice";
 import {RoleSelection} from "@parts/RoleSelection/RoleSelection";

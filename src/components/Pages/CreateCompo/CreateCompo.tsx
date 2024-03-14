@@ -144,7 +144,7 @@ export const CreateCompo: React.FC = () => {
     const maxPLayer = roles.reduce((a, b) => a + b.max, 0) - 2;
 
     return (
-        <div className="create-compo-box">
+        <div className="pages-container create-compo-box">
             <ConfigHeader
                 link="/"
                 title="Paramétrer la partie"
