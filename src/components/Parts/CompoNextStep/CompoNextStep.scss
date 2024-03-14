@@ -1,0 +1,51 @@
+// To retrieve default styles and variables
+@import "@styles/index.scss";
+
+.confirmation-container {
+    position: fixed;
+    z-index: 5;
+    padding: 10%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($colorBlack, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .confirmation-box {
+        width: fit-content;
+        padding: 4px;
+        border-radius: 4px;
+        background-color: $colorBlack;
+        border: 2px solid $colorWhite;
+        font-size: 16px;
+
+        .advice {
+            font-size: 12px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .choice {
+            display: block;
+            margin: auto;
+            width: fit-content;
+            line-height: 100%;
+            padding: 9px;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        .continue-button {
+            background-color: $colorGreen;
+        }
+
+        .cancel-button {
+            background-color: $colorRed;
+        }
+    }
+}

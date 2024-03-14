@@ -220,4 +220,9 @@
 
 -   Added confirmation box if balance score is too low or too high (-15 / +15)
 
+### 0.3.11 `14 mars 2024`
+
+-   Factorize CreateCompo component by creating another sub-component : 'CompoNextStep'
+-   Extraction of all variable in CompoNextStep and calculate them in utilitie file 'compoValidator'
+
 </details>

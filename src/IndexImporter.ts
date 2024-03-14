@@ -25,6 +25,7 @@ export {
 
 import {AppButton} from "@parts/AppButton/AppButton";
 import {Checkbox} from "@parts/Checkbox/Checkbox";
+import {CompoNextStep} from "@parts/CompoNextStep/CompoNextStep";
 import {ConfigHeader} from "@parts/ConfigHeader/ConfigHeader";
 import {GameBalanceScore} from "@parts/GameBalanceScore/GameBalanceScore";
 import {GameStep} from "@parts/GameStep/GameStep";
@@ -38,6 +39,7 @@ export {
     AppButton,
     Checkbox,
     ComedienRoles,
+    CompoNextStep,
     ConfigHeader,
     GameBalanceScore,
     GameStep,
@@ -77,12 +79,13 @@ export {
 // =============================================================================
 // ? Utilities Functions
 
+import {compoValidator} from "@utilities/compoValidator";
 import {errorSaver} from "@utilities/errorSaver";
 import {imageImporter} from "@utilities/imageImporter";
 import {stepFinder} from "./utilities/stepFinder";
 
 export {
-    errorSaver, imageImporter, stepFinder
+    compoValidator, errorSaver, imageImporter, stepFinder
 };
 
 // =============================================================================
