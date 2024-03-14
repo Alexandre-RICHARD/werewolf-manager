@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
+import {useNavigate} from "react-router-dom";
 
 import {
     AppButton,
@@ -14,6 +15,7 @@ import {
 import "./CreateCompo.scss";
 
 const NextStepButton: React.FC<{"enoughRole": boolean}> = ({enoughRole}) => {
+    const navigate = useNavigate();
     const {balanceScore, composition} = useAppSelector(werewolfState.GameData);
 
     const roleForComedien = roles
@@ -45,26 +47,64 @@ const NextStepButton: React.FC<{"enoughRole": boolean}> = ({enoughRole}) => {
         enoughRole &&
         (!isComedien || (isComedien && comedienSpecialRole >= 3));
 
+    let timeoutHandle: NodeJS.Timeout | null = null;
+
+    const handleErrorMessage = (text: string) => {
+        const messageEl = document.querySelector(".compo-error-message");
+        if (messageEl) {
+            messageEl.textContent = "";
+            setTimeout(() => messageEl.textContent = text, 1);
+
+            if (timeoutHandle !== null) {
+                clearTimeout(timeoutHandle);
+            }
+
+            timeoutHandle = setTimeout(
+                () => messageEl.textContent = "",
+                10000
+            );
+        }
+    };
+
+    const handleNextStepButton = (link: string) => {
+        if (validToContinue) {
+            navigate(`${link}`);
+        } else if (!enoughRole) {
+            handleErrorMessage("Nombre de rôles incorrect");
+        } else if (!voleurValid) {
+            handleErrorMessage(
+                "Les rôles actuels ne peuvent être donné au voleur"
+            );
+        } else if (!isComedien) {
+            handleErrorMessage("La composition est invalide");
+        } else if (isComedien && comedienSpecialRole < 3) {
+            handleErrorMessage("Pas assez de rôle attribuable au Comédien");
+        } else handleErrorMessage("ERROR");
+    };
+
     return (
-        <>
+        <div className="create-compo-next-button">
             {!isComedien
                 ? (
                     <AppButton
                         classname={validToContinue ? "primary" : "disable"}
+                        effect={handleNextStepButton}
                         goal="/game/create/name"
                         text="Inscrire le nom des joueurs"
-                        type="navLink"
+                        type="button"
                     />
                 )
                 : (
                     <AppButton
                         classname={validToContinue ? "primary" : "disable"}
+                        effect={handleNextStepButton}
                         goal="/game/create/comedien"
                         text="Attribuer des rôles au comédien"
-                        type="navLink"
+                        type="button"
                     />
                 )}
-        </>
+            <span className="compo-error-message" />
+        </div>
     );
 };
 

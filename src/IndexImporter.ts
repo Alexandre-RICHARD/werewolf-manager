@@ -23,10 +23,12 @@ export {
 
 import {AppButton} from "@parts/AppButton/AppButton";
 import {Checkbox} from "./components/Parts/Checkbox/Checkbox";
+import {ComedienRoles} from "@parts/ComedienRoles/ComedienRoles";
 import {ConfigHeader} from "@parts/ConfigHeader/ConfigHeader";
 import {GameBalanceScore} from "@parts/GameBalanceScore/GameBalanceScore";
 import {GameStep} from "@parts/GameStep/GameStep";
 import {NextStepButton} from "@parts/NextStepButton/NextStepButton";
+import {PlayerName} from "@parts/PlayerName/PlayerName";
 import {PlayerNumber} from "@parts/PlayerNumber/PlayerNumber";
 import {RolesChoice} from "@parts/RolesChoice/RolesChoice";
 import {RoleSelection} from "@parts/RoleSelection/RoleSelection";
@@ -35,10 +37,12 @@ import {SliderValue} from "@parts/SliderValue/SliderValue";
 export {
     AppButton,
     Checkbox,
+    ComedienRoles,
     ConfigHeader,
     GameBalanceScore,
     GameStep,
     NextStepButton,
+    PlayerName,
     PlayerNumber,
     RolesChoice,
     RoleSelection,

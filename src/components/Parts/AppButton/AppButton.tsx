@@ -8,8 +8,9 @@ export const AppButton: React.FC<{
     "type": string;
     "goal": string;
     "text": string;
+    "effect"?: (goal: string) => void;
 }> = ({
-    classname, type, goal, text,
+    classname, type, goal = "", text, effect = () => {},
 }) => {
     if (type === "navLink") {
         return (
@@ -23,7 +24,15 @@ export const AppButton: React.FC<{
     }
 
     if (type === "button") {
-        return null;
+        return (
+            <button
+                className={`nav-button ${classname}`}
+                type="button"
+                onClick={() => effect(goal)}
+            >
+                {text}
+            </button>
+        );
     }
 
     return null;

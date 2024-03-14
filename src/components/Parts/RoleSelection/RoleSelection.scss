@@ -59,12 +59,12 @@
 
         .decrease-role-button {
             left: 2.5px;
-            background-color: #871d1d99;
+            background-color: rgba($colorRed, 0.6);
         }
 
         .increase-role-button {
             right: 2.5px;
-            background-color: #25851c99;
+            background-color: rgba($colorGreen, 0.6);
         }
     }
 

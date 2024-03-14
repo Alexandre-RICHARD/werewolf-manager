@@ -25,4 +25,51 @@
             line-height: 26px;
         }
     }
+
+    .create-compo-next-button {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+
+        .compo-error-message {
+            position: absolute;
+            z-index: 4;
+            bottom: 40px;
+            font-size: 14px;
+            line-height: 200%;
+            padding: 0 8px;
+            border-radius: 4px;
+            background-color: rgba($colorRed, 0.6);
+            user-select: none;
+            pointer-events: none;
+
+            &:not(:empty) {
+                animation: vibrate 0.2s linear 2 both;
+            }
+        }
+
+        @keyframes vibrate {
+            0% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-2px, 2px);
+            }
+            40% {
+                transform: translate(-2px, -2px);
+            }
+            60% {
+                transform: translate(2px, 2px);
+            }
+            80% {
+                transform: translate(2px, -2px);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+    }
 }

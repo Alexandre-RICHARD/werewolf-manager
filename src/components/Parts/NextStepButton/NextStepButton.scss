@@ -2,8 +2,8 @@
 @import "@styles/index.scss";
 
 .next-step-button {
-    background-color: #1b1b1b;
+    background-color: $colorDarkGray;
     border-radius: 18px;
-    color: #ffffff;
+    color: $colorWhite;
     width: 100%;
 }

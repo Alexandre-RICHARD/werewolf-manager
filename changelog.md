@@ -201,5 +201,14 @@
 -   Add in roles.json key-value pair for if comedian can take role
 -   In GameBalanceScore, add '=' sign in one operation to handle all case
 -   Modify class and colors for AppButton
+-   Finish to handle the nextStep button on createCompo
+
+### 0.3.8 `14 mars 2024`
+
+-   Update dependencies
+-   Transform and move some colors to variables in variable.scss
+-   Creation of two components for the rest
+-   Added handling for errorMessage when click on nextStep in Create Compo component
+-   Adapt AppButton to be a button with onClick callback and not only a NavLink
 
 </details>
