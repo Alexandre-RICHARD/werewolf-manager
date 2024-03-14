@@ -1,5 +1,8 @@
-import React from "react";
-import {useNavigate} from "react-router-dom";
+/* eslint-disable max-lines */
+/* eslint-disable @stylistic/max-len */
+/* eslint-disable max-lines-per-function */
+import React, {useState} from "react";
+import {NavLink, useNavigate} from "react-router-dom";
 
 import {
     AppButton,
@@ -17,6 +20,11 @@ import "./CreateCompo.scss";
 const NextStepButton: React.FC<{"enoughRole": boolean}> = ({enoughRole}) => {
     const navigate = useNavigate();
     const {balanceScore, composition} = useAppSelector(werewolfState.GameData);
+
+    const [
+        confirmationNeeded,
+        setConfirmationNeeded
+    ] = useState(false);
 
     const roleForComedien = roles
         .filter((role) => role.comedianCanTake)
@@ -68,7 +76,11 @@ const NextStepButton: React.FC<{"enoughRole": boolean}> = ({enoughRole}) => {
 
     const handleNextStepButton = (link: string) => {
         if (validToContinue) {
-            navigate(`${link}`);
+            if (balanceScore <= -15 || balanceScore > 15) {
+                setConfirmationNeeded(true);
+            } else {
+                navigate(`${link}`);
+            }
         } else if (!enoughRole) {
             handleErrorMessage("Nombre de rôles incorrect");
         } else if (!voleurValid) {
@@ -104,6 +116,34 @@ const NextStepButton: React.FC<{"enoughRole": boolean}> = ({enoughRole}) => {
                     />
                 )}
             <span className="compo-error-message" />
+            {confirmationNeeded
+                ? (
+                    <div className="confirmation-container">
+                        <div className="confirmation-box">
+                            <p>
+                                {`L'équilibrage est fortement en faveur des ${balanceScore > 0 ? "Villageois" : "Loups"}.`}
+                            </p>
+                            <p>
+                                Continuer à l'étape suivante ?
+                            </p>
+                            <NavLink
+                                className="choice continue-button"
+                                to={isComedien ? "/game/create/comedien" : "/game/create/name"}
+                            >
+                                Oui, continuer
+                            </NavLink>
+                            <button
+                                className="choice cancel-button"
+                                type="button"
+                                onClick={() => setConfirmationNeeded(false)}
+                            >
+                                Non, réviser la composition
+                            </button>
+                        </div>
+                    </div>
+                )
+
+                : null}
         </div>
     );
 };

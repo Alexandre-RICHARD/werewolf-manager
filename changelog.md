@@ -216,4 +216,8 @@
 -   For all pages components, add a second class to handle global style of the page, style located in index.scss
 -   Handle Routes to new components
 
+### 0.3.10 `14 mars 2024`
+
+-   Added confirmation box if balance score is too low or too high (-15 / +15)
+
 </details>
