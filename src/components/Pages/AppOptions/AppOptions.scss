@@ -2,25 +2,4 @@
 @import "@styles/index.scss";
 
 .app-options {
-    .home-page-link {
-        align-self: flex-start;
-
-        .home-link-icon {
-            svg {
-                width: 25px;
-                height: 25px;
-                fill: $colorWhite;
-            }
-        }
-    }
-
-    .options-container {
-        width: 100%;
-
-        &-title {
-            text-align: center;
-            font-weight: 400;
-            font-size: 18px;
-        }
-    }
 }

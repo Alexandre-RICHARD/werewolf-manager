@@ -225,4 +225,8 @@
 -   Factorize CreateCompo component by creating another sub-component : 'CompoNextStep'
 -   Extraction of all variable in CompoNextStep and calculate them in utilitie file 'compoValidator'
 
+### 0.3.12 `15 mars 2024`
+
+-   Delete some useless code in some component
+
 </details>
